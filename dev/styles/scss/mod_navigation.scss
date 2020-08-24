@@ -1,0 +1,181 @@
+//Vars
+$navColor: black;
+
+// Horizontale Navigation
+.mod_navigation {
+  font-family: $font2;
+
+  .level_1{
+    strong{
+      color: $color4;
+    }
+    a{
+      color: white;
+      &:hover, &:focus{
+        color: $color4;
+      }
+    }
+    .trail{
+      color: lighten($color4, 30%);
+    }
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  &#mainnav {
+    display: none;
+    @media all and (min-width: $break3) {
+      display: block;
+      overflow: visible;
+      .level_1 {
+        display: flex;
+
+        > li {
+          margin-right: 0.5rem;
+          font-size: 1.75rem;
+          display: flex;
+          color: white;
+          position: relative;
+          padding-bottom: 5px;
+
+          &.submenu {
+            .level_2 {
+              @include transition();
+              display: block;
+              transform: rotate(3deg) skewY(-3deg) scaleY(0);
+              transform-origin: top;
+              position: absolute;
+              padding: 2rem 1rem 0.5em;
+              margin-left: -1rem;
+              top: 98.6%;
+              min-width: calc(100% + 2rem);
+              background-color: lighten($color1, 10%);
+              z-index: 100;
+              border-radius: 0 0 5px 5px;
+              box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+
+              > li {
+                transform: skewY(3deg);
+
+                a, strong {
+                  display: block;
+                  font-size: $linkSize;
+                }
+
+                .level_3 {
+                  display: block;
+
+                  li {
+                    font-family: $font1;
+
+                    > a, > strong {
+                      display: flex;
+
+                      &:before {
+                        content: "•";
+                        margin-right: 5px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            &:hover, &:focus-within {
+              .level_2 {
+                transform: rotate(3deg) skewY(-3deg) scaleY(1);
+              }
+            }
+          }
+
+          &:after {
+            content: "•";
+            margin-left: 0.5rem;
+          }
+
+          &:last-of-type {
+            margin-right: 0;
+
+            &:after {
+              display: none;
+            }
+          }
+
+          @media all and (min-width: 1300px) {
+            font-size: 2.375rem;
+          }
+        }
+      }
+    }
+  }
+
+  &#metanav {
+    .level_1 {
+      display: flex;
+      font-family: $font1;
+      flex-wrap: wrap-reverse;
+      flex-direction: row-reverse;
+
+      > li {
+        margin-left: 0.5rem;
+        color: $color1;
+
+        a {
+          color: $color1;
+          font-size: $linkSize;
+          &:hover, &:focus{
+            color: $color2
+          }
+        }
+        strong{
+          color: $color2;
+        }
+
+        &:first-of-type {
+          order: 3;
+        }
+
+        &:before {
+          content: "|";
+          margin-right: 0.5rem;
+          font-size: $linkSize;
+        }
+
+        &:first-of-type, &:last-of-type {
+          &:before {
+            display: none;
+          }
+        }
+      }
+
+      @media all and (min-width: $break2) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        > li {
+          &:after {
+            content: "|";
+            margin-left: 0.5rem;
+            font-size: $linkSize;
+          }
+
+          &:before {
+            display: none;
+          }
+
+          &:first-of-type {
+            order: 0;
+          }
+
+          &:last-of-type {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

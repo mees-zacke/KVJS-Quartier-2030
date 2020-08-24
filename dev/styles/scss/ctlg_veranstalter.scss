@@ -1,0 +1,72 @@
+.mod_catalogUniversalView.veranstalter{
+  .ctlg_teaser{
+    a{
+      .titel{
+        strong{
+          margin-left: 0.5em;
+        }
+      }
+    }
+  }
+  .ctlg_master{
+    .rechte-spalte{
+      >.datenblock{
+        background: none;
+      }
+    }
+  }
+}
+
+.mod_catalogUniversalView.veranstalter-FE{
+  .ctlg_master {
+    @include grid();
+    .linke-spalte {
+      grid-column: span 12;
+
+      .datenblock {
+        background: none;
+
+        .datenblock-spalte {
+          background-color: lighten($color1, 50%);
+          padding-top: 1rem;
+
+          p {
+            font-weight: 400;
+          }
+        }
+      }
+      .operations{
+      }
+    }
+    .rechte-spalte{
+      grid-column: span 12;
+      .ctlg_teaser{
+        border-top: 2px solid $color1;
+        margin-bottom: 3rem;
+        .freigabe-warnung{
+          padding-left: 1rem;
+          font-weight: 600;
+          font-size: $linkSize;
+        }
+      }
+    }
+
+    @media all and (min-width: $break3) {
+      .linke-spalte {
+        grid-column: span 6;
+      }
+      .rechte-spalte {
+        grid-column: span 6;
+      }
+    }
+  }
+  .ctlg_teaser{
+    a{
+      padding-left: 1rem;
+      padding-bottom: 1rem;
+      p{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

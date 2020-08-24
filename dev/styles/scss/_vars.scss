@@ -1,0 +1,185 @@
+// Breakpoints
+$break1: 30em;
+$break2: 48em;
+$break3: 64em;
+$break4: 90em;
+
+// Farben
+$color1: rgb(234,89,1);
+$color2: rgb(75,143,51);
+$color3: rgb(169,190,15);
+$color4: rgb(193,216,20);
+$color5: rgb(255,255,0);
+$color6: rgb(60,165,50);
+
+$colorPG1: rgb(255,250,125);
+$colorPG2: rgb(255,210,125);
+$colorPG3: rgb(255,170,125);
+$colorPG4: rgb(255,130,125);
+$colorPG5: rgb(255,90,125);
+
+$backgroundColor1: rgb(255, 255, 255);
+
+
+// Schrift
+$font1: 'Open Sans', Helvetica, sans-serif;
+$font2: 'Anton', Helvetica, Verdana, sans-serif;
+
+// Schrift Farben
+$fontColor: rgb(20,20,20);
+$fontColor2: rgb(0, 0, 0);
+
+$hColor: $color1;
+$linkColor: $color1;
+$linkColorHover: $color2;
+
+$colorImageCaption: $fontColor;
+
+// Schrift Größen
+
+$max-fontSize: 18; // Font Size bei größter Größe
+$min-fontSize: 16; // Font Size bei mobiler Größe
+
+$max-teaserSize: 23; // Teaser Size bei größter Größe
+$min-teaserSize: 18; // Teaser Size bei mobiler Größe
+
+$max-linkSize: 16; // Link Size bei größter Größe
+$min-linkSize: 12; // Link Size bei mobiler Größe
+
+$fontWidth: 400;
+$lineHeight: 1.5;
+
+// Überschrift Größen
+
+// h1
+$max-h1Size: 46; // h1 Size bei größter Größe
+$min-h1Size: 46; // h1 Size bei mobiler Größe
+
+// h2
+$max-h2Size: 36; // h2 Size bei größter Größe
+$min-h2Size: 36; // h2 Size bei mobiler Größe
+
+// h3
+$max-h3Size: $max-teaserSize; // h3 bei größter Größe
+$min-h3Size: $max-teaserSize; // h3 bei mobiler Größe
+
+// h4
+$max-h4Size: $max-fontSize; // h4 bei größter Größe
+$min-h4Size: $min-fontSize; // h4 bei mobiler Größe
+
+// h5
+$max-h5Size: $max-fontSize; // h5 bei größter Größe
+$min-h5Size: $min-fontSize; // h5 bei mobiler Größe
+
+// h6
+$max-h6Size: $max-fontSize; // h6 bei größter Größe
+$min-h6Size: $min-fontSize; // h6 bei mobiler Größe
+
+$hWidth: 400;
+$hLineHeight: 1.5;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////// Berechnungen von Schriften ////////////////////////////////////////////////////////////////////////////
+//////////// Fließtext
+$max-fontSize-rem-base: ($max-fontSize / 16);
+$max-fontSize-rem: #{$max-fontSize-rem-base}rem;
+$min-fontSize-rem-base: ($min-fontSize / 16);
+$min-fontSize-rem: #{$min-fontSize-rem-base}rem;
+$fontSize: calc(#{$min-fontSize}px + (#{$max-fontSize} - #{$min-fontSize}) * ((100vw - 320px) / (1600 - 300)));
+//////////// Teasertext
+$max-teaserSize-rem-base: ($max-teaserSize / 16);
+$max-teaserSize-rem: #{$max-teaserSize-rem-base}rem;
+$min-teaserSize-rem-base: ($min-teaserSize / 16);
+$min-teaserSize-rem: #{$min-teaserSize-rem-base}rem;
+$teaserSize: calc(#{$min-teaserSize}px + (#{$max-teaserSize} - #{$min-teaserSize}) * ((100vw - 320px) / (1600 - 300)));
+//////////// Link
+$max-linkSize-rem-base: ($max-linkSize / 16);
+$max-linkSize-rem: #{$max-linkSize-rem-base}rem;
+$min-linkSize-rem-base: ($min-linkSize / 16);
+$min-linkSize-rem: #{$min-linkSize-rem-base}rem;
+$linkSize: calc(#{$min-linkSize}px + (#{$max-linkSize} - #{$min-linkSize}) * ((100vw - 320px) / (1600 - 300)));
+
+//////////// Überschriften
+/////////// h1
+$max-h1Size-rem-base: ($max-h1Size / 16);
+$max-h1Size-rem: #{$max-h1Size-rem-base}rem;
+$min-h1Size-rem-base: ($min-h1Size / 16);
+$min-h1Size-rem: #{$min-h1Size-rem-base}rem;
+$h1Size: calc(#{$min-h1Size}px + (#{$max-h1Size} - #{$min-h1Size}) * ((100vw - 320px) / (1600 - 300)));
+/////////// h2
+$max-h2Size-rem-base: ($max-h2Size / 16);
+$max-h2Size-rem: #{$max-h2Size-rem-base}rem;
+$min-h2Size-rem-base: ($min-h2Size / 16);
+$min-h2Size-rem: #{$min-h2Size-rem-base}rem;
+$h2Size: calc(#{$min-h2Size}px + (#{$max-h2Size} - #{$min-h2Size}) * ((100vw - 320px) / (1600 - 300)));
+/////////// h3
+$max-h3Size-rem-base: ($max-h3Size / 16);
+$max-h3Size-rem: #{$max-h3Size-rem-base}rem;
+$min-h3Size-rem-base: ($min-h3Size / 16);
+$min-h3Size-rem: #{$min-h3Size-rem-base}rem;
+$h3Size: calc(#{$min-h3Size}px + (#{$max-h3Size} - #{$min-h3Size}) * ((100vw - 320px) / (1600 - 300)));
+/////////// h4
+$max-h4Size-rem-base: ($max-h4Size / 16);
+$max-h4Size-rem: #{$max-h4Size-rem-base}rem;
+$min-h4Size-rem-base: ($min-h4Size / 16);
+$min-h4Size-rem: #{$min-h4Size-rem-base}rem;
+$h4Size: calc(#{$min-h4Size}px + (#{$max-h4Size} - #{$min-h4Size}) * ((100vw - 320px) / (1600 - 300)));
+/////////// h5
+$max-h5Size-rem-base: ($max-h5Size / 16);
+$max-h5Size-rem: #{$max-h5Size-rem-base}rem;
+$min-h5Size-rem-base: ($min-h5Size / 16);
+$min-h5Size-rem: #{$min-h5Size-rem-base}rem;
+$h5Size: calc(#{$min-h5Size}px + (#{$max-h5Size} - #{$min-h5Size}) * ((100vw - 320px) / (1600 - 300)));
+/////////// h6
+$max-h6Size-rem-base: ($max-h6Size / 16);
+$max-h6Size-rem: #{$max-h6Size-rem-base}rem;
+$min-h6Size-rem-base: ($min-h6Size / 16);
+$min-h6Size-rem: #{$min-h6Size-rem-base}rem;
+$h6Size: calc(#{$min-h6Size}px + (#{$max-h6Size} - #{$min-h6Size}) * ((100vw - 320px) / (1600 - 300)));
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$contentWidth: 100rem;
+@mixin contentWidth{
+  max-width: $contentWidth;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+$abstandAussen: 0.75rem;
+
+$borderRadius: 3px;
+
+// MIXINS
+@mixin pageWidth {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: $abstandAussen;
+  padding-right: $abstandAussen;
+}
+
+@mixin transition($time: 0.3s) {
+  -webkit-transition: ease all $time;
+  -moz-transition: ease all $time;
+  -o-transition: ease all $time;
+  transition: ease all $time;
+}
+
+@mixin button($background:$color1, $color:white, $border:$color ) {
+  @include transition();
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  background-color: $background;
+  color: $color;
+  font-weight: 600;
+  border: 1px solid $border;
+  cursor: pointer;
+  outline: none;
+
+  &:hover, &:focus {
+    background-color: $color;
+    border-color: $background;
+    color: $background;
+  }
+}

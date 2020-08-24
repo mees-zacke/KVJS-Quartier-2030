@@ -1,0 +1,171 @@
+.ce_form {
+  h1 {
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid $color1;
+  }
+
+  form {
+    .formbody {
+      > fieldset {
+        margin-bottom: 0.25rem;
+        background-color: lighten($color1, 50%);
+        margin-top: 1em;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid $color1;
+
+        > legend {
+          font-size: $h3Size;
+          font-weight: 600;
+          margin-bottom: 1em;
+          background-color: $color1;
+          padding: 1em;
+          border-radius: 10px;
+          color: white;
+        }
+      }
+
+        .widget {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 0.25rem 1rem 1rem;
+
+          &-text, &-textarea, &-select {
+            input, textarea, select {
+              @include transition();
+              width: 100%;
+              max-width: 100%;
+              border: none;
+              outline: none;
+              padding: 0.25em 0.5em;
+
+              &:focus {
+                box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.25);
+              }
+            }
+          }
+
+          &-checkbox {
+            .checkbox_container {
+              > legend {
+                padding-bottom: 0.5em;
+              }
+
+              label{
+                &:hover{
+                  &:before{
+                    background-image: url("/files/layout/images/checkbox-haken-checked-hover.svg");
+                  }
+                }
+              }
+              input {
+                display: none;
+
+                &:checked {
+                  + label {
+                    &:before {
+                      background-image: url("/files/layout/images/checkbox-haken-checked.svg");
+                    }
+                  }
+                }
+              }
+
+              label {
+                display: grid;
+                grid-template-columns: 2rem 1fr;
+                grid-column-gap: 10px;
+                font-size: 1.25rem;
+                margin-right: 2rem;
+                align-items: center;
+                margin-bottom: 1rem;
+
+                &:before {
+                  content: "";
+                  display: block;
+                  width: 1.5em;
+                  height: 1.5em;
+                  border: 1px solid $color1;
+                  background-color: white;
+                  border-radius: 20%;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+
+          &-radio {
+            > legend {
+              padding-bottom: 0.5em;
+            }
+
+            label{
+              &:hover{
+                :before{
+                  background-image: url("/files/layout/images/radio-button-hover.svg");
+                }
+              }
+            }
+
+            input {
+              display: none;
+
+              &:checked {
+                + label {
+                  &:before {
+                    background-image: url("/files/layout/images/radio-button.svg");
+                  }
+                }
+              }
+            }
+
+            label {
+              display: grid;
+              grid-template-columns: 2rem 1fr;
+              grid-column-gap: 10px;
+              font-size: 1.25rem;
+              margin-right: 2rem;
+              align-items: center;
+              margin-bottom: 1rem;
+
+              &:before {
+                content: "";
+                display: block;
+                width: 1.5em;
+                height: 1.5em;
+                border: 1px solid $color1;
+                background-color: white;
+                border-radius: 50%;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+
+        &.kriterien {
+          .widget {
+            &-explanation {
+              &.erklaerung {
+                font-weight: 600;
+              }
+            }
+            &-textarea{
+              label{
+                padding-bottom: 0;
+                padding-top: 1rem;
+                max-width: 60%;
+                margin-bottom: 1rem;
+              }
+
+            }
+          }
+        }
+
+      .widget-submit {
+        button{
+          @include button;
+        }
+      }
+    }
+  }
+}

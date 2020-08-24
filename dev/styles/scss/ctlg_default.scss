@@ -1,0 +1,479 @@
+///////////////////////////////////////// FILTER //////////////
+
+.ce_catalogFilterForm {
+  grid-column: span 12;
+  margin-bottom: 4rem;
+
+  form {
+    background-color: lighten($color1, 50%);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+    .ctlg_form_field {
+      .label {
+        display: grid;
+        grid-template-columns: 2em 1fr;
+        grid-column-gap: 0.5em;
+        align-items: center;
+        font-family: $font2;
+        letter-spacing: 2px;
+        margin-bottom: 0.25em;
+        padding: 1.5rem 1rem;
+        color: $color1;
+        background-color: lighten($color1, 40%);
+        cursor: pointer;
+        font-size: $teaserSize;
+
+        &:before {
+          @include transition();
+          content: "";
+          width: 1.5em;
+          height: 1.5em;
+          box-sizing: border-box;
+          padding-left: 0.3rem;
+          display: inline-block;
+          background-image: url("/files/layout/images/bew-kompass.svg");
+          background-repeat: no-repeat;
+        }
+
+        &:hover, &:focus {
+          &:before {
+            background-image: url("/files/layout/images/checkbox-haken-bne-hover.svg");
+          }
+        }
+
+        &.accordeon-active, &.accordeon-checked {
+          &:before {
+            background-image: url("/files/layout/images/checkbox-haken-bne.svg");
+          }
+        }
+      }
+
+      .accordeon-body {
+        display: none;
+        margin-bottom: 0;
+        padding: 2rem 1rem;
+        max-height: 450px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .checkbox_container {
+          input {
+            display: none;
+
+            &:checked {
+              + label {
+                &:before {
+                  background-image: url("/files/layout/images/checkbox-haken-checked.svg");
+                }
+              }
+            }
+          }
+
+          label {
+            display: grid;
+            grid-template-columns: 2rem 1fr;
+            grid-column-gap: 10px;
+            font-size: 1.25rem;
+            margin-right: 2rem;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            &:before {
+              @include transition();
+              content: "";
+              display: block;
+              width: 1.5em;
+              height: 1.5em;
+              border: 1px solid $color1;
+              background-image: url("/files/layout/images/checkbox.svg");
+              background-repeat: no-repeat;
+              border-radius: 20%;
+              margin-right: 5px;
+            }
+          }
+          &:hover{
+            label{
+              &:before{
+                background-image: url("/files/layout/images/checkbox-haken-checked-hover.svg");
+              }
+            }
+          }
+        }
+      }
+
+      &.text {
+        margin: 1rem;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        max-width: 100%;
+
+        input {
+          border: none;
+          outline: none;
+          background: none;
+          margin-left: 10px;
+          font-family: $font2;
+          letter-spacing: 2px;
+          width: 100%;
+        }
+
+        &:before {
+          content: url("/files/layout/images/lupe.svg");
+          width: 1.5em;
+          height: 1.5em;
+
+        }
+      }
+    }
+
+    .submit-container {
+      padding: 0.5rem 1rem;
+      background-color: $color1;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      display: flex;
+      justify-content: space-between;
+      appearance: none;
+
+      button, .reset a {
+        font-size: $teaserSize;
+        font-family: $font2;
+        text-decoration: none;
+        letter-spacing: 2px;
+        margin: 0;
+        color: white;
+
+        &:hover {
+          color: $color3;
+        }
+      }
+
+      button {
+        background: none;
+        border: none;
+        padding: 0;
+        outline: none;
+        @include transition();
+        cursor: pointer;
+      }
+
+      .reset{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+////////////////////////////// LISTE //////////////////////////////////////////////
+
+.mod_catalogUniversalView {
+  grid-column: span 12;
+
+  .new-operator{
+    a{
+      @include button;
+    }
+    margin-bottom: 1rem;
+  }
+
+  .ctlg_teaser, .ctlg_master {
+    .datenblock {
+      @include grid();
+      @include transition();
+      padding: 1em 0;
+      background-color: lighten($color1, 50%);
+
+      h4 {
+        margin-bottom: 0.5em;
+      }
+
+      .datenblock-spalte {
+        padding: 0 1rem;
+        .datenliste {
+          .datenliste-punkt {
+            display: grid;
+            grid-template-columns: 1.5em 1fr;
+            color: $fontColor;
+            font-size: $linkSize;
+            font-weight: 600;
+            align-items: center;
+            margin-bottom: 0.25em;
+
+            &:before {
+              content: url("/files/layout/images/bew-kompass.svg");
+              width: 1.2em;
+              height: 1.2em;
+              margin-right: 0.5em;
+            }
+          }
+        }
+
+        p {
+          color: $fontColor;
+          font-size: $linkSize;
+          font-weight: 600;
+        }
+
+      }
+
+      .datenblock-links, .datenblock-rechts {
+        grid-column: span 12;
+      }
+
+      &.sdg-container {
+        padding: 0 1rem 1rem;
+
+        .sdg-liste {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0;
+
+          .sdg {
+            width: 15%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+
+            &:nth-of-type(6n) {
+              margin-right: 0;
+            }
+
+            figure {
+              margin: 0;
+            }
+
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .operations{
+      padding-top: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      li{
+        width: 50%;
+        a{
+          @include button;
+          background-color: white;
+          color: $color1;
+        }
+      }
+    }
+  }
+
+  .ctlg_teaser {
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+    &.first{
+      a{
+        border-top: 2px solid $color1;
+        margin-top: 0;
+      }
+    }
+    a {
+      border-top: 2px solid transparent;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding-top: 1em;
+      border-bottom: 1px solid $color1;
+      display: block;
+      border-bottom-right-radius: 1rem;
+
+      > h3 {
+        text-decoration: none;
+        color: $fontColor;
+        font-family: $font1;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+        padding: 0 1rem;
+      }
+
+      .teaser-logo-container {
+        margin-bottom: 1em;
+        @include grid();
+
+        .teaser {
+          padding: 0 1rem;
+          grid-column: span 12;
+          color: $fontColor;
+          margin-bottom: 0;
+        }
+
+        .angebotsbild {
+          grid-column: span 4;
+          padding: 0 1rem;
+        }
+      }
+
+      .datenblock{
+        padding-bottom: 0;
+        border-bottom-right-radius: 1rem;
+      }
+
+      .weiterlesen {
+        @include transition();
+        font-size: $linkSize;
+        padding: 0.5em 1rem;
+        background-color: $color1;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        outline: none;
+        margin-left: auto;
+        margin-bottom: 0;
+        border-top: 1px solid $color1;
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+
+      &:hover, &:focus {
+        border-top: 2px solid $color1;
+        background-color: lighten($color1, 50%);
+        border-top-right-radius: 75px;
+
+        .teaser-logo-container {
+          .teaser {
+          }
+        }
+        .datenblock{
+          background-color: lighten($color1, 45%);
+        }
+
+        .weiterlesen {
+          color: $color1;
+          background-color: lighten($color1,50%);
+        }
+      }
+    }
+
+    @media all and (min-width: $break3) {
+      a {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+        .teaser-logo-container {
+          grid-template-columns: repeat(8, 1fr);
+
+          .teaser {
+            grid-column: span 6;
+            padding-right: 0;
+          }
+
+          .angebotsbild {
+            grid-column: span 2;
+            padding-left: 0;
+          }
+        }
+
+        .datenblock {
+          grid-template-columns: repeat(8, 1fr);
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 1rem;
+          >*{
+            grid-column: span 8;
+          }
+
+          .datenblock-links {
+            grid-column: span 4;
+            padding-right: 0;
+          }
+
+          .datenblock-rechts {
+            grid-column: span 4;
+          }
+        }
+
+        .weiterlesen {
+          margin-left: 0;
+          margin-right: auto;
+          border-radius: 0 1rem 0 1rem;
+        }
+      }
+    }
+  }
+
+  .ctlg_master {
+    @include grid();
+    margin-top: 1em;
+
+    .titel {
+      font-family: $font1;
+      color: $fontColor;
+      font-size: $fontSize;
+      font-weight: 600;
+    }
+
+    .text {
+      margin-bottom: 2em;
+    }
+
+    .angebotsbild, .anbieter {
+      max-width: 50%;
+      margin-top: 1em;
+    }
+
+    .back {
+      display: block;
+      width: 100%;
+      padding: 0.5em;
+      background-color: $color1;
+      color: white;
+      font-weight: 600;
+      border: 1px solid white;
+
+      &:hover, &:focus {
+        background-color: white;
+        border-color: $color1;
+        color: $color1;
+      }
+    }
+
+    @media all and (min-width: $break3) {
+      .linke-spalte {
+        grid-column: span 6;
+      }
+      .rechte-spalte {
+        grid-column: span 6;
+
+        .datenblock {
+          grid-template-columns: repeat(6, 1fr);
+          >*{
+            grid-column: span 6;
+          }
+
+          .datenblock-links, .datenblock-rechts {
+            grid-column: span 3;
+          }
+
+          .datenblock-links {
+          }
+
+          .datenblock-rechts {
+          }
+
+          &.sdg-container {
+            grid-column: span 6;
+          }
+        }
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////
+
+@media all and (min-width: $break3) {
+
+  .ce_catalogFilterForm {
+    grid-column: span 4;
+
+    + .mod_catalogUniversalView {
+      grid-column: span 8;
+    }
+  }
+}

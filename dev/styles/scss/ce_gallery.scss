@@ -1,0 +1,39 @@
+@mixin gallery($counter: 12, $direction: row, $wrap: wrap, $justify: flex-start, $content: flex-start, $items: flex-start, $abstand: 1vw) {
+  @for $i from 1 through $counter {
+    .cols_#{$i} {
+      display: flex;
+      flex-direction: #{$direction};
+      flex-wrap: #{$wrap};
+      justify-content: #{$justify};
+      align-content: #{$content};
+      align-items: #{$items};
+      li {
+        width: (100% / $i);
+        >* {
+          margin: #{$abstand};
+        }
+      }
+    }
+  }
+}
+
+.ce_gallery {
+  ul {
+    li {
+      &:first-of-type {
+        figure {
+          margin-left: 0;
+        }
+      }
+
+      &:last-of-type {
+        figure {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @include gallery($content: center, $items: center);
+
+}
