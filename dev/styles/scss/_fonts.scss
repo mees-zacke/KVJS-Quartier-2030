@@ -1,13 +1,18 @@
-/* anton-regular - latin */
 @font-face {
-  font-family: 'Anton';
+  font-family: 'Gudea';
   font-style: normal;
   font-weight: 400;
-  src: url('/files/layout/fonts/anton-v11-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Anton Regular'), local('Anton-Regular'),
-  url('/files/layout/fonts/anton-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('/files/layout/fonts/anton-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/files/layout/fonts/anton-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
-  url('/files/layout/fonts/anton-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('/files/layout/fonts/anton-v11-latin-regular.svg#Anton') format('svg'); /* Legacy iOS */
+  src: url('/files/layout/fonts/Gudea-Regular.ttf');
+}
+@font-face {
+  font-family: 'Gudea';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/files/layout/fonts/Gudea-Italic.ttf');
+}
+@font-face {
+  font-family: 'Gudea';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/files/layout/fonts/Gudea-Bold.ttf');
 }
