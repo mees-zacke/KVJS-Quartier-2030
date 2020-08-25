@@ -5,66 +5,80 @@ contao:
         imagine_options:
             jpeg_quality: 100
         sizes:
-            kopfbild:
-                width: 3000
-                height: 300
+            kopfbild-start:
+                width: 500
+                height: 450
                 resizeMode: 'crop'
                 zoom: 100
-                cssClass: 'kopfbild'
+                cssClass: 'kopfbild-start'
                 densities: '1x, 2x'
                 lazy_loading: true
                 items:
-                    -   width: 1920
-                        height: 300
-                        resizeMode: 'crop'
-                        zoom: 100
-                        densities: '0.5x, 2x'
-                        sizes: '100vw'
-                        media: '(max-width: 1920px)'
-                    -   width: 1024
-                        height: 300
-                        resizeMode: 'crop'
-                        zoom: 100
-                        densities: '0.5x, 2x'
-                        sizes: '100vw'
-                        media: '(max-width:1024px)'
                     -   width: 768
-                        height: 300
+                        height: 400
                         resizeMode: 'crop'
                         zoom: 100
                         densities: '0.5x, 2x'
                         sizes: '100vw'
-                        media: '(max-width:768px)'
-            kopfbild-gross:
-                width: 3000
-                height: 768
+                        media: '(min-width:480px) and (max-width:767px)'
+                    -   width: 1024
+                        height: 400
+                        resizeMode: 'crop'
+                        zoom: 100
+                        densities: '0.5x, 2x'
+                        sizes: '100vw'
+                        media: '(min-width:768px) and (max-width:1023px)'
+                    -   width: 1920
+                        height: 580
+                        resizeMode: 'crop'
+                        zoom: 100
+                        densities: '0.5x, 2x'
+                        sizes: '100vw'
+                        media: '(min-width:1024px) and (max-width: 1920px)'
+                    -   width: 3000
+                        height: 580
+                        resizeMode: 'crop'
+                        zoom: 100
+                        densities: '0.5x, 2x'
+                        sizes: '100vw'
+                        media: '(min-width:1921px)'
+            kopfbild-klein:
+                width: 500
+                height: 200
                 resizeMode: 'crop'
                 zoom: 100
-                cssClass: 'kopfbild-gross'
+                cssClass: 'kopfbild-klein'
                 densities: '1x, 2x'
                 lazy_loading: true
                 items:
-                    -   width: 1920
-                        height: 768
-                        resizeMode: 'crop'
-                        zoom: 100
-                        densities: '1x, 2x'
-                        sizes: '100vw'
-                        media: '(max-width: 1920px)'
-                    -   width: 1024
-                        height: 575
-                        resizeMode: 'crop'
-                        zoom: 100
-                        densities: '1x, 2x'
-                        sizes: '100vw'
-                        media: '(max-width:1024px)'
                     -   width: 768
-                        height: 575
+                        height: 150
                         resizeMode: 'crop'
                         zoom: 100
-                        densities: '1x, 2x'
+                        densities: '0.5x, 2x'
                         sizes: '100vw'
-                        media: '(max-width:768px)'
+                        media: '(min-width:480px) and (max-width:767px)'
+                    -   width: 1024
+                        height: 150
+                        resizeMode: 'crop'
+                        zoom: 100
+                        densities: '0.5x, 2x'
+                        sizes: '100vw'
+                        media: '(min-width:768px) and (max-width:1023px)'
+                    -   width: 1920
+                        height: 150
+                        resizeMode: 'crop'
+                        zoom: 100
+                        densities: '0.5x, 2x'
+                        sizes: '100vw'
+                        media: '(min-width:1024px) and (max-width: 1920px)'
+                    -   width: 3000
+                        height: 200
+                        resizeMode: 'crop'
+                        zoom: 100
+                        densities: '0.5x, 2x'
+                        sizes: '100vw'
+                        media: '(min-width:1921px)'
             2zu1:
                 width: 1920
                 height: 960
