@@ -5,20 +5,15 @@ $break3: 64em;
 $break4: 90em;
 
 // Farben
-$color1: rgb(234,89,1);
-$color2: rgb(75,143,51);
-$color3: rgb(169,190,15);
-$color4: rgb(193,216,20);
-$color5: rgb(255,255,0);
-$color6: rgb(60,165,50);
-
-$colorPG1: rgb(255,250,125);
-$colorPG2: rgb(255,210,125);
-$colorPG3: rgb(255,170,125);
-$colorPG4: rgb(255,130,125);
-$colorPG5: rgb(255,90,125);
-
-$backgroundColor1: rgb(255, 255, 255);
+$color1: var(--color1);
+$color2: var(--color2);
+$color3: var(--color3);
+$color4: var(--color4);
+$color5: var(--color5);
+$color6: var(--color6);
+$white: var(--white);
+$black: var(--black);
+$backgroundColor1: $white;
 
 
 // Schrift
@@ -26,8 +21,8 @@ $font1: 'Open Sans', Helvetica, sans-serif;
 $font2: 'Anton', Helvetica, Verdana, sans-serif;
 
 // Schrift Farben
-$fontColor: rgb(20,20,20);
-$fontColor2: rgb(0, 0, 0);
+$fontColor: var(--font-color);
+$fontColor2: $black;
 
 $hColor: $color1;
 $linkColor: $color1;
@@ -165,7 +160,7 @@ $borderRadius: 3px;
   transition: ease all $time;
 }
 
-@mixin button($background:$color1, $color:white, $border:$color ) {
+@mixin button($background:$color1, $color:$white, $border:$color ) {
   @include transition();
   display: block;
   width: 100%;

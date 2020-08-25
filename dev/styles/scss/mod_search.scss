@@ -91,7 +91,7 @@
 
         &:hover, &:focus {
           border-top: 2px solid $color1;
-          background-color: lighten($color1, 50%);
+          background-color: $color2;
           border-top-right-radius: 75px;
         }
       }

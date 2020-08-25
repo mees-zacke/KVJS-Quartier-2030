@@ -1,5 +1,5 @@
 .ui-autocomplete {
-  $border: 1px solid rgb(220, 220, 220);
+  $border: 1px solid $white;
   position: absolute;
   z-index: 700;
 
@@ -25,11 +25,11 @@
   }
 
   .ui-menu-divider {
-    border: 2px solid black;
+    border: 2px solid $black;
   }
 
   .ui-state-focus, .ui-state-hover, .ui-state-active {
-    background-color: lighten($color1, 35%);
+    background-color: $color1;
   }
 }
 

@@ -64,8 +64,8 @@
 
     &-content {
       padding: 1rem;
-      border-left: 2px dashed lighten($color1, 40%);
-      border-bottom: 2px solid lighten($color1, 40%);
+      border-left: 2px dashed $color1;
+      border-bottom: 2px solid $color1;
       border-bottom-left-radius: 0.75rem 1rem;
       border-bottom-right-radius: 1.75rem 4rem;
     }
