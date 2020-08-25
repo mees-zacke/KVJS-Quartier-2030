@@ -11,7 +11,74 @@ body {
     //////// HEADER ////////
     ////////////////////////////
     #header{
-
+      background-color: $color6;
+      .inside{
+        padding-top: 5vh;
+        @include pageWidth;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        .linker-header{
+          .navigation-suche-container{
+            display: block;
+            >p{
+              font-weight: 600;
+              font-size: $teaserSize;
+              margin-right: 2rem;
+              margin-bottom: 20px;
+            }
+            .mod_form{
+              display: none;
+              @media all and (min-width: $break2){
+                display: block;
+                form{
+                  .formbody{
+                    display: flex;
+                    .widget{
+                      &-submit{
+                        height: 2em;
+                        width: 1.5em;
+                        padding-top: 5px;
+                      }
+                      &-text{
+                        input{
+                          height: 2em;
+                          width: 200px;
+                          border: none;
+                          background: none;
+                          padding-left: 1rem;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            @media all and (min-width: $break2){
+              display: flex;
+            }
+          }
+        }
+        .logo-container{
+          .ce_image{
+            figure {
+              position: absolute;
+              width: 60%;
+              right: 5px;
+              top: 5px;
+              @media all and (min-width: $break1){
+                width: 50%;
+              }
+              @media all and (min-width: $break2){
+                width: 40%;
+              }
+              @media all and (min-width: $break3){
+                width: 30%;
+              }
+            }
+            }
+        }
+      }
     }
     // Ende #Header
 

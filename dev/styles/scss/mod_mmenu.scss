@@ -4,15 +4,14 @@
     height: 2.375rem;
     margin-bottom: 0;
     margin-right: 0;
-    margin-top: 30px;
     .hamburger {
       @include transition();
       height: 4px;
       width: 38px;
       margin: 7px;
-      background-color: $color4;
+      margin-left: 0;
+      background-color: $fontColor;
       display: block;
-      border-radius: 12px;
       &:first-child {
         margin-top: 0;
       }
@@ -24,7 +23,7 @@
       display: inline-block;
       &:focus, &:hover {
         .hamburger {
-          background-color: white;
+          background-color: $color2;
         }
       }
 
