@@ -10,38 +10,46 @@ body {
     /////////////////////////////
     //////// HEADER ////////
     ////////////////////////////
-    #header{
+    #header {
       background-color: $color6;
-      .inside{
+
+      .inside {
         padding-top: 5vh;
         @include pageWidth;
         display: flex;
         justify-content: space-between;
         position: relative;
-        .linker-header{
-          .navigation-suche-container{
+
+        .linker-header {
+          .navigation-suche-container {
             display: block;
-            >p{
+
+            > p {
               font-weight: 600;
               font-size: $teaserSize;
               margin-right: 2rem;
               margin-bottom: 20px;
             }
-            .mod_form{
+
+            .mod_form {
               display: none;
-              @media all and (min-width: $break2){
+              @media all and (min-width: $break2) {
                 display: block;
-                form{
-                  .formbody{
+                form {
+                  .formbody {
                     display: flex;
-                    .widget{
-                      &-submit{
+
+                    .widget {
+                      &-submit {
                         height: 2em;
                         width: 1.5em;
                         padding-top: 5px;
+                        background-image: $lupe;
+                        background-repeat: no-repeat;
                       }
-                      &-text{
-                        input{
+
+                      &-text {
+                        input {
                           height: 2em;
                           width: 200px;
                           border: none;
@@ -54,40 +62,48 @@ body {
                 }
               }
             }
-            @media all and (min-width: $break2){
+
+            @media all and (min-width: $break2) {
               display: flex;
             }
           }
         }
-        .logo-container{
-          .ce_image{
+
+        .logo-container {
+          .ce_image {
             figure {
               position: absolute;
+              z-index: 5;
               width: 60%;
               right: 5px;
               top: 5px;
-              @media all and (min-width: $break1){
+              @media all and (min-width: $break1) {
                 width: 50%;
               }
-              @media all and (min-width: $break2){
+              @media all and (min-width: $break2) {
                 width: 40%;
               }
-              @media all and (min-width: $break3){
+              @media all and (min-width: $break3) {
                 width: 30%;
               }
             }
-            }
+          }
         }
       }
     }
+
     // Ende #Header
 
     /////////////////////////////
     ////////// CUSTOM //////////
     ////////////////////////////
 
-    .custom{
-
+    .custom {
+      #meta{
+        @include pageWidth;
+        margin-top: 4rem;
+        margin-bottom: 10px;
+      }
     }
 
     /////////////////////////////
@@ -100,6 +116,7 @@ body {
         .inside {
           .mod_article {
             @include grid;
+
           }
         }
       }
@@ -116,7 +133,63 @@ body {
     ////////////////////////////
 
     #footer {
-      padding: 0 $abstandAussen;
+      background-color: $color6;
+      .inside{
+        @include pageWidth;
+        @include grid();
+        .quicklinks{
+          grid-column: span 4;
+          display: none;
+          a:not(:hover){
+            color: $fontColor;
+          }
+        }
+        .info-kvjs{
+          grid-column: span 12;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 4vw;
+          .ce_text{
+            grid-column: span 1;
+            &.ansprechpartner{
+              padding-top: 5em;
+            }
+          }
+        }
+        .beschreibung-container{
+          grid-column: span 12;
+          .ce_image{
+            text-align: center;
+          }
+        }
+        @media all and (min-width: $break2){
+          .info-kvjs{
+            display: block;
+            grid-column: 9/13;
+            .ce_text:not(.ansprechpartner){
+              figure{
+                width: 50%;
+              }
+              p{
+                padding-left: 11%;
+              }
+            }
+            .ce_text.ansprechpartner{
+              padding-top: 1em;
+              padding-left: 11%;
+            }
+          }
+          .beschreibung-container{
+            padding-top: 1rem;
+            grid-column: 5/9;
+            grid-row: 1;
+            .ce_image{
+              text-align: left;
+              width: 50%;
+            }
+          }
+        }
+      }
     }
 
     // Ende #Footer

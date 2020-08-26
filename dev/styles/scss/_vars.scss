@@ -13,8 +13,9 @@ $color5: var(--color5);
 $color6: var(--color6);
 $white: var(--white);
 $black: var(--black);
+$black-50: var(--black-50);
+$white-50: var(--white-50);
 $backgroundColor1: $white;
-
 
 // Schrift
 $font1: 'Gudea', Helvetica, sans-serif;
@@ -24,11 +25,17 @@ $font2: 'EBGaramond', Times, serif;
 $fontColor: var(--font-color);
 $fontColor2: $black;
 
-$hColor: $color1;
-$linkColor: $fontColor;
+$hColor: $black;
+$linkColor: $color5;
 $linkColorHover: $color1;
 
 $colorImageCaption: $fontColor;
+
+// SVGs
+
+$lupe-color:$fontColor;
+$lupe: url('data:image/svg+xml;utf8,<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 421.21 421.21"><defs><style>.cls-1{fill:#1d1d1b;}</style></defs><title>lupe</title><path class="cls-1" d="M421.21,378.79,321.06,278.63a176.65,176.65,0,1,0-42.43,42.43L378.79,421.21ZM176.7,284.4A107.7,107.7,0,1,1,284.4,176.7,107.68,107.68,0,0,1,176.7,284.4Z"/></svg> ');
+
 
 // Schrift Größen
 

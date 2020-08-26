@@ -21,10 +21,10 @@ body {
 
 * {
   box-sizing: border-box;
-  @include transition;
 }
 
 a {
+  @include transition();
   border-bottom: none;
   color: $linkColor ;
   text-decoration: none;
