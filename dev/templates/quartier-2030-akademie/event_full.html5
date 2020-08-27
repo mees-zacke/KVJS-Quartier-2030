@@ -2,7 +2,7 @@
 
     <div class="head">
         <h1 itemprop="name"><?= $this->title ?></h1>
-        <a href="#form" title="zum Anmeldeformular">Jetzt online Anmelden</a>
+        <a href="{{env::request}}#anmeldeformular" title="zum Anmeldeformular">Jetzt online Anmelden</a>
     </div>
 
     <div class="information-container">

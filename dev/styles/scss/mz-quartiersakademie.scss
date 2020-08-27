@@ -111,6 +111,7 @@ body {
     ////////////////////////////
     #container {
       @include pageWidth;
+      padding-top: 2rem;
       // Anfang #main
       #main {
         .inside {

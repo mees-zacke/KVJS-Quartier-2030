@@ -1,0 +1,14 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <?= $this->event ?>
+
+  <div id="anmeldeformular">
+    {{insert_form::2}}
+  </div>
+
+  <!-- indexer::stop -->
+  <p class="back"><a href="<?= $this->referer ?>" title="<?= $this->back ?>"><?= $this->back ?></a></p>
+  <!-- indexer::continue -->
+<?php $this->endblock(); ?>

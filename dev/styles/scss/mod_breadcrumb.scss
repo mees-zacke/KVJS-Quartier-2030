@@ -20,13 +20,18 @@
 
       li {
         color: $fontColor;
+        &:first-of-type{
+          display: none;
+        }
+        &:nth-of-type(2){
+          &:before{
+            display: none;
+          }
+        }
 
         &:before {
           content: '/';
           margin: 0 0.5rem;
-        }
-        &.first{
-          display: none;
         }
         &.active{
           font-weight: 600;

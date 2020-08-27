@@ -1,0 +1,41 @@
+<!-- indexer::stop -->
+<div class="<?= $this->class ?> kurse block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+
+<div class="head">
+    <h2>Jetzt online anmelden</h2>
+    <p>Unter dem Vorbehalt der Kostenübernahme durch das Land Baden-Württemberg</p>
+</div>
+<div class="schritte-container">
+    <div class="schritt-container">
+        <div class="schritt active"><p>Schritt 1</p></div>
+        <p>Kurzer Text zu Schritt 1 mit Hinweisen zur Motivation </p>
+    </div>
+    <div class="schritt-container">
+        <div class="schritt"><p>Schritt 2</p></div>
+        <p>Wir prüfen, Sie bekommen Bescheid Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name </p>
+    </div>
+    <div class="schritt-container">
+        <div class="schritt"><p>Schritt 3</p></div>
+        <p>Der Anbieter melde sich bei Ihnen: Lorem Ipsum, hinaus zu gehen in die weite Grammatik. Der große </p>
+    </div>
+</div>
+<?php if ($this->headline): ?>
+<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+<?php endif; ?>
+
+<form<?php if ($this->action): ?> action="<?= $this->action ?>"<?php endif; ?> method="<?= $this->method ?>" enctype="<?= $this->enctype ?>"<?= $this->attributes ?><?= $this->novalidate ?>>
+<div class="formbody">
+    <?php if ('get' != $this->method): ?>
+    <input type="hidden" name="FORM_SUBMIT" value="<?= $this->formSubmit ?>">
+    <input type="hidden" name="REQUEST_TOKEN" value="{{request_token}}">
+    <?php if ($this->maxFileSize): ?>
+    <input type="hidden" name="MAX_FILE_SIZE" value="<?= $this->maxFileSize ?>">
+    <?php endif; ?>
+    <?php endif; ?>
+    <?= $this->hidden ?>
+    <?= $this->fields ?>
+</div>
+</form>
+
+</div>
+<!-- indexer::continue -->
