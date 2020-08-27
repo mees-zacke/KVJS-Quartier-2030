@@ -1,0 +1,41 @@
+<div class="event layout_full block<?= $this->class ?>" itemscope itemtype="http://schema.org/Event">
+
+    <div class="head">
+        <h1 itemprop="name"><?= $this->title ?></h1>
+        <a href="#form" title="zum Anmeldeformular">Jetzt online Anmelden</a>
+    </div>
+
+    <div class="information-container">
+        <div class="information">
+            <div class="datum-zeit-container">
+                <div class="datum">
+                    <?= \Date::parse("d M Y", $this->startDate) ?>
+                </div>
+                <div class="zeit">
+                    <?= $this->time ?> Uhr
+                </div>
+            </div>
+            <div class="ort-container">
+                <p>
+                    Ort der Veranstaltung
+                </p>
+                <p class="ort">
+                    <?= $this->address ?>
+                </p>
+            </div>
+        </div>
+        <div class="ansprechpartner">
+            <p>
+                Die Fortbildung wird angeboten von:
+            </p>
+            <p>
+                <?= $this->teaser ?>
+            </p>
+        </div>
+    </div>
+
+    <div class="details">
+        <?= $this->details ?>
+    </div>
+
+</div>

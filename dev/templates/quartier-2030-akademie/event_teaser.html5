@@ -1,0 +1,30 @@
+<div class="event layout_teaser<?= $this->classList ?>" itemscope itemtype="http://schema.org/Event">
+
+  <?php if ($this->hasDetails): ?>
+    <a href="<?= $this->href ?>" title="<?= $this->title ?> (<?php if ($this->day): ?><?= $this->day ?>, <?php endif; ?><?= $this->date ?><?php if ($this->time): ?> <?= $this->time ?><?php endif; ?>)"<?= $this->target ?> itemprop="url">
+  <?php endif; ?>
+
+  <div class="datenblock">
+    <div class="tag">
+      <?= \Date::parse("d.m.", $this->startDate) ?>
+    </div>
+    <div class="jahr">
+      <?= \Date::parse("Y", $this->startDate) ?>
+    </div>
+    <?php if($this->location):?>
+    <div class="ort">
+      <?= $this->location ?>
+    </div>
+    <?php endif;?>
+  </div>
+
+  <div class="titel">
+    <p>
+      <?= $this->title ?>
+    </p>
+  </div>
+  <?php if ($this->hasDetails): ?>
+    </a>
+  <?php endif; ?>
+
+</div>
