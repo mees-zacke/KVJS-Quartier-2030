@@ -14,8 +14,27 @@ jQuery(function ($) {
   }
   /* Create an alert to show if the browser is IE or not */
   if (isIE()){
-    alert('Ihr Browser wird nicht mehr Unterstützt. Bitte verwenden Sie einen neuen. Zum Beispiel: Microsoft Edge, Google Chrome oder Mozilla Firefox');
+    alert('Ihr Browser wird nicht mehr Unterstützt. Bitte verwenden Sie einen Neuen. Zum Beispiel: Microsoft Edge, Google Chrome oder Mozilla Firefox');
   }
+
+  /* rechte Spalte zum rausziehen im mobilen */
+
+  $(document).ready(function(){
+    if ($('#right')){
+      $('#right').prepend('<div class="sidebar-opener"></div>')
+    }
+
+    $('#right .sidebar-opener').on( 'click' , function close() {
+        $('#right').toggleClass('open');
+      })
+  });
+
+  /* bewegen von inhalten der Eventansicht in die Rechte Spalte */
+
+  $(function moveToRight (){
+    $('.move-to-right').appendTo($('#right .inside'));
+  });
+
 
 
 

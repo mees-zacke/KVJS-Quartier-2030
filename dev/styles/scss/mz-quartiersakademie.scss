@@ -111,7 +111,6 @@ body {
     ////////////////////////////
     #container {
       @include pageWidth;
-      @include grid();
       padding-top: 2rem;
       // Anfang #main
 
@@ -123,10 +122,6 @@ body {
 
           }
         }
-      }
-      #right{
-        margin-right: 0;
-        grid-column: span 3;
       }
 
       // Ende #main
@@ -208,8 +203,81 @@ body {
   &.rechte-spalte{
     #wrapper{
       #container{
+        position: relative;
         #main{
-          grid-column: span 9;
+        }
+        #right{
+          position: absolute;
+          top: 0;
+          right: 0;
+          .sidebar-opener{
+            @include transition();
+            z-index: 3;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 0;
+            background-color: $color1;
+            box-shadow: 0 0 5px $black-50;
+
+          }
+          .inside, >a{
+            @include transition();
+            z-index: 4;
+            background-color: $white;
+            width: 80vw;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            padding: 20px;
+            border-bottom: 1px solid $color1;
+            border-left: 1px solid $color1;
+            box-shadow: 0 0 5px $black-50;
+          }
+          &.open{
+            .sidebar-opener{
+              right: 80vw;
+            }
+            .inside, >a{
+              left: -80vw;
+            }
+          }
+        }
+        @media all and (min-width: $break1){
+          #right{
+            .inside{
+              width: 50vw;
+            }
+            &.open{
+              .sidebar-opener{
+                right: 50vw;
+              }
+              .inside{
+                left: -50vw;
+              }
+            }
+          }
+        }
+        @media all and (min-width: $break2){
+          @include grid();
+          #main{
+            grid-column: span 9;
+          }
+          #right{
+            position: static;
+            .sidebar-opener{
+              display: none;
+            }
+            .inside{
+              width: 100%;
+              position: static;
+              border: none;
+              padding: 0;
+              box-shadow: none;
+            }
+            margin-right: 0;
+            grid-column: span 3;
+          }
         }
       }
     }

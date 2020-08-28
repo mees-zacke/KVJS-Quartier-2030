@@ -51,33 +51,15 @@
     .head{
       @include grid();
       h1{
-        grid-column: span 9;
         font-weight: 400;
-      }
-      a{
-        background-color: $color7;
-        color: $black;
-        grid-column: span 3;
-        border: 1px solid $white;
-        padding: 1rem;
-        align-self: flex-start;
-        font-weight: 600;
-        text-align: center;
-        &:hover, &:focus{
-          background-color: $white;
-          color: $color7;
-          border-color: $color7;
-        }
       }
     }
     .information-container{
-      @include grid();
       position: relative;
       .information{
         border-top: 1px solid $black-50;
         border-bottom: 1px solid $black-50;
         padding: 1rem 0;
-        grid-column: span 9;
         .datum-zeit-container{
           display: flex;
           font-size: $linkSize;
@@ -102,19 +84,9 @@
           }
         }
       }
-      .ansprechpartner{
-        grid-column: span 3;
-        p:first-of-type{
-          font-size: $linkSize;
-        }
-      }
     }
     .details{
       margin-top: 1rem;
-      @include grid();
-      >*{
-        grid-column: span 9;
-      }
     }
   }
   #anmeldeformular{
@@ -136,6 +108,32 @@
         color: $black-50;
         border-color: $black-50;
       }
+    }
+  }
+}
+#right{
+  .head{
+    a{
+      background-color: $color7;
+      color: $black;
+      grid-column: span 3;
+      display: inline-block;
+      margin-bottom: 1rem;
+      border: 1px solid $white;
+      padding: 1rem;
+      align-self: flex-start;
+      font-weight: 600;
+      text-align: center;
+      &:hover, &:focus{
+        background-color: $white;
+        color: $color7;
+        border-color: $color7;
+      }
+    }
+  }
+  .ansprechpartner{
+    p:first-of-type{
+      font-size: $linkSize;
     }
   }
 }

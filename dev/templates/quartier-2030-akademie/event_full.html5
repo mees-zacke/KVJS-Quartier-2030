@@ -2,7 +2,6 @@
 
     <div class="head">
         <h1 itemprop="name"><?= $this->title ?></h1>
-        <a href="{{env::request}}#anmeldeformular" title="zum Anmeldeformular">Jetzt online Anmelden</a>
     </div>
 
     <div class="information-container">
@@ -24,7 +23,7 @@
                 </p>
             </div>
         </div>
-        <div class="ansprechpartner">
+        <div class="ansprechpartner move-to-right">
             <p>
                 Die Fortbildung wird angeboten von:
             </p>
