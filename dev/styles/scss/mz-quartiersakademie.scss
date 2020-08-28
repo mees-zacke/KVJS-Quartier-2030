@@ -111,15 +111,25 @@ body {
     ////////////////////////////
     #container {
       @include pageWidth;
+      @include grid();
       padding-top: 2rem;
       // Anfang #main
+      #main:not(+right){
+        grid-column: span 12;
+      }
+
       #main {
+        grid-column: span 9 ;
         .inside {
           .mod_article {
             @include grid;
 
           }
         }
+      }
+      #right{
+        margin-right: 0;
+        grid-column: span 3;
       }
 
       // Ende #main

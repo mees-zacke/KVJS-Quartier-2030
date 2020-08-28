@@ -96,7 +96,7 @@ $navColor: $black;
 
     li {
       grid-column: span 6;
-      a {
+      a, &.active {
         display: flex;
         width: 100%;
         height: 100%;
@@ -107,13 +107,14 @@ $navColor: $black;
         color: white;
         border: 1px solid $white;
 
-        &:hover, &:focus {
-          text-shadow: 0 2px 3px $white-50;
-        }
-
         span {
           width: 100%;
           text-align: center;
+        }
+      }
+      a{
+        &:hover, &:focus {
+          text-shadow: 0 2px 3px $white-50;
         }
       }
 
@@ -170,6 +171,27 @@ $navColor: $black;
       }
       @media  all and (min-width: $break2){
         grid-column: span 2;
+      }
+    }
+  }
+}
+.rechte-spalte{
+  .lernfelder{
+    .level_1{
+      grid-template-columns: 1fr;
+      grid-row-gap: 0.5rem;
+      li{
+        grid-column: span 1;
+        a{
+          background-color: $grey;
+        }
+        &:last-of-type{
+          display: none;
+        }
+      }
+      li.active{
+        background-color: $color1;
+        text-align: center;
       }
     }
   }

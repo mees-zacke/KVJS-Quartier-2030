@@ -46,6 +46,7 @@
 }
 
 .mod_eventreader {
+  @include grid();
   .layout_full{
     .head{
       @include grid();
@@ -114,6 +115,12 @@
       >*{
         grid-column: span 9;
       }
+    }
+  }
+  #anmeldeformular{
+    grid-column: span 12;
+    @media all and (min-width: $break2){
+      grid-column: span 9;
     }
   }
   .back{
