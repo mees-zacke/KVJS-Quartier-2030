@@ -8,6 +8,7 @@ jQuery(function($) {
         var dropDownElement = $('p').children('.dropDownReadMore');
         if (dropDownElement) {
             $(dropDownElement).parent().append('&nbsp;');
+            $(dropDownElement).parent().nextAll('.after').css('display','none');
             !$(dropDownElement).parent().nextAll().not('.after').css('display','none');
             $(dropDownElement).on('click touch', function() {
                 $(this).parent().nextAll().not('.after').slideToggle( function() {

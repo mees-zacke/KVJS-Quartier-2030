@@ -1,6 +1,19 @@
 .ce_download, .ce_downloads {
-  .size {
-    font-size: 0.75em;
-    font-weight: 300;
+  li{
+    margin-bottom: 0.75em;
+    a{
+      .meta{
+        font-size: 0.8rem;
+        *{
+          color: $black-50;
+        }
+        .size{
+          &:after{
+            content: "|";
+            margin: 0 1em;
+          }
+        }
+      }
+    }
   }
 }

@@ -192,6 +192,9 @@ $navColor: $black;
       li.active{
         background-color: $color1;
         text-align: center;
+        strong{
+          width: 100%;
+        }
       }
     }
   }

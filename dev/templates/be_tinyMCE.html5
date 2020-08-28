@@ -50,11 +50,17 @@ setTimeout(function() {
             }
           },
       {
-          title: 'weitere Projekte - Schalter',
+          title: 'Akkordion - Öffnen',
           block: 'span',
           classes: 'dropDownReadMore',
           exact: true,
-      }
+      },
+      {
+          title: 'Akkordion - Schließen',
+          block: 'p',
+          classes: 'after',
+          exact: false,
+      },
 
         ]}
     ]

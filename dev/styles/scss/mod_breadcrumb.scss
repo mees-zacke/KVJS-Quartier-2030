@@ -21,9 +21,6 @@
       li {
         color: $fontColor;
         &:first-of-type{
-          display: none;
-        }
-        &:nth-of-type(2){
           &:before{
             display: none;
           }
