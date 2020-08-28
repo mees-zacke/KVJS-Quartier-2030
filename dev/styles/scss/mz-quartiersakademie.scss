@@ -114,12 +114,9 @@ body {
       @include grid();
       padding-top: 2rem;
       // Anfang #main
-      #main:not(+right){
-        grid-column: span 12;
-      }
 
       #main {
-        grid-column: span 9 ;
+        grid-column: span 12 ;
         .inside {
           .mod_article {
             @include grid;
@@ -208,4 +205,13 @@ body {
   }
 
   // Ende #wrapper
+  &.rechte-spalte{
+    #wrapper{
+      #container{
+        #main{
+          grid-column: span 9;
+        }
+      }
+    }
+  }
 }
