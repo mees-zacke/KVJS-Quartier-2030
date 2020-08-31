@@ -64,6 +64,14 @@ body {
             }
 
             .switch {
+              position: fixed;
+              left: 0;
+              top: 18vh;
+              padding: 10px;
+              z-index: 4;
+              background-color: $color6;
+              border: 1px solid $border;
+              border-left: none;
               &:hover {
                 cursor: pointer;
               }
@@ -74,6 +82,9 @@ body {
                 border-radius: 0.25rem;
                 border-color: $black;
                 color: $black;
+              }
+              @media all and (min-width: $break2){
+                position: static;
               }
             }
 
@@ -235,7 +246,7 @@ body {
             right: 0;
             background-color: $color1;
             box-shadow: 0 0 5px $black-50;
-
+            border: 1px solid $border;
           }
           .inside, >a{
             @include transition();
