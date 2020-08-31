@@ -50,23 +50,21 @@
 
       &.first {
         a {
-          border-top: 2px solid $color1;
+          border-top: 2px solid $color5;
           margin-top: 0;
         }
       }
 
       a {
-        border-top: 2px solid transparent;
         margin-top: 2rem;
         margin-bottom: 2rem;
         padding-top: 1em;
-        border-bottom: 1px solid $color1;
+        border-bottom: 1px solid $color5;
         display: block;
-        border-bottom-right-radius: 1rem;
 
         h2 {
           text-decoration: none;
-          color: $color1;
+          color: $fontColor;
           font-family: $font1;
           font-weight: 600;
           margin-bottom: 0.5em;
@@ -80,19 +78,22 @@
         }
 
         .highlight {
-          background-color: transparent;
-          color: $color1;
+          @include transition();
+          color: $color5;
         }
 
         .url {
+          @include transition();
           font-size: 0.75em;
-          color: $color1;
+          color: $color5;
         }
 
         &:hover, &:focus {
-          border-top: 2px solid $color1;
-          background-color: $color2;
-          border-top-right-radius: 75px;
+          background-color: $grey;
+          border-color: $color1;
+          .highlight, .url{
+            color: $color1
+          }
         }
       }
     }
