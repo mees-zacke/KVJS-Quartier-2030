@@ -1,12 +1,12 @@
 
 <div class="layout_full block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
 
-  <div>
+  <div class="head">
+    <?php if ($this->hasMetaFields): ?>
+    <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?=  \Date::parse("d. M. Y", $this->time) ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
+    <?php endif; ?>
     <h1 itemprop="name"><?= $this->newsHeadline ?></h1>
 
-    <?php if ($this->hasMetaFields): ?>
-    <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
-    <?php endif; ?>
   </div>
 
   <?php if ($this->hasSubHeadline): ?>

@@ -2,6 +2,7 @@
   .layout_teaser{
     margin-bottom: 1rem;
     a{
+      border: 1px solid $border;
     display: flex;
     width: 100%;
     .datenblock{
@@ -24,7 +25,7 @@
       .ort{
         font-weight: 600;
         font-size: $linkSize;
-        color: $black;
+        color: $black-bg;
       }
     }
     .titel{
@@ -58,8 +59,8 @@
     .information-container{
       position: relative;
       .information{
-        border-top: 1px solid $black-50;
-        border-bottom: 1px solid $black-50;
+        border-top: 1px solid $black;
+        border-bottom: 1px solid $black;
         padding: 1rem 0;
         .datum-zeit-container{
           display: flex;
@@ -116,7 +117,7 @@
   .head{
     a{
       background-color: $color7;
-      color: $black;
+      color: $black-bg;
       grid-column: span 3;
       display: inline-block;
       margin-bottom: 1rem;
@@ -133,6 +134,7 @@
     }
   }
   .ansprechpartner{
+    margin-bottom: 3rem;
     p:first-of-type{
       font-size: $linkSize;
     }

@@ -11,7 +11,34 @@ body{
   --color7: #C4D400;
   --black: #000;
   --black-50: rgba(0,0,0,0.5);
+  --black-with-BG: #000;
   --white: #FFF;
   --white-50: rgba(255,255,255,0.5);
+  --white-low-contrast: #FFF;
   --grey: #EFEFEF;
+  --border: transparent;
+  &.white{
+    --font-color: #000;
+    --color1: #000;
+    --color2: #000;
+    --color3: #000;
+    --color4: #000;
+    --color5: #000;
+    --color6: #FFF;
+    --color7: #000;
+    --black: #000;
+    --black-50: transparent;
+    --black-with-BG: #FFF;
+    --white: #FFF;
+    --white-50: transparent;
+    --white-low-contrast: #000;
+    --grey: #EFEFEF;
+    --border: #000;
+    img, video{
+      filter: grayscale(1);
+    }
+  }
+  &.black{
+
+  }
 }

@@ -105,7 +105,7 @@ $navColor: $black;
         padding: 8% !important;
         text-shadow: 0 2px 3px $black-50;
         color: white;
-        border: 1px solid $white;
+        border: 1px solid $border;
 
         span {
           width: 100%;
@@ -183,6 +183,7 @@ $navColor: $black;
       li{
         grid-column: span 1;
         a{
+          color: $white-contrast;
           background-color: $grey;
         }
         &:last-of-type{

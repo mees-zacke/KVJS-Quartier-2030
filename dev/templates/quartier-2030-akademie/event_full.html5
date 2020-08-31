@@ -10,9 +10,11 @@
                 <div class="datum">
                     <?= \Date::parse("d M Y", $this->startDate) ?>
                 </div>
+                <?php if ($this->time): ?>
                 <div class="zeit">
                     <?= $this->time ?> Uhr
                 </div>
+                <?php endif; ?>
             </div>
             <div class="ort-container">
                 <p>

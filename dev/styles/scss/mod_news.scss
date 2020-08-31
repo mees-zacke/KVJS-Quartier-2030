@@ -82,6 +82,7 @@
     }
   }
   &.news-start{
+    border: 1px solid $border;
     padding: 1rem;
     background-color: $grey;
     .layout_simple{
@@ -98,15 +99,16 @@
 .mod_newsreader {
   .layout_full {
     margin-top: 1em;
-    >div{
+    .head{
       > h1 {
         margin: 0;
         padding-bottom: 1em;
       }
       .info{
-        border-bottom: 1px solid $black-50;
 
       }
+      border-bottom: 1px solid $black;
+      margin-bottom: 1rem;
     }
   }
   .back {

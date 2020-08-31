@@ -255,6 +255,7 @@
             padding: 1rem;
           }
           &.active{
+            color: $black-bg;
             border-color: $white;
             background-color: $color4;
           }

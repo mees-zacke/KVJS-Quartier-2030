@@ -4,6 +4,9 @@
     height: 2.375rem;
     margin-bottom: 0;
     margin-right: 0;
+    .name{
+      display: none;
+    }
     .hamburger {
       @include transition();
       height: 4px;
@@ -47,48 +50,49 @@
 .mod_mmenu{
   .mm-panels{
     .mm-panel{
-      background-color: $color1;
+      background-color: $white;
       .mm-navbar{
-        background-color:$color1;
+        background-color: $white;
         a{
-          color: white;
+          color: $color5;
           font-weight: 600;
           &:before{
             @include transition();
-            border-color: white;
+            border-color: $color5;
           }
           &:hover, &:focus{
+            color: $color1;
             &:before{
-              border-color: $color4;
+              border-color: $color1;
             }
           }
         }
       }
       .mm-listview{
         .mm-listitem{
-          background-color: $color1;
+          background-color: $white;
           &__text{
-            color: white;
+            color: $color5;
             font-weight: 600;
             &:hover, &:focus{
-              color: $color4;
+              color: $color1;
             }
           }
           &__btn{
             &:after{
               @include transition();
-              border-color: white;
+              border-color: $color5;
             }
             &:hover, &:focus{
               &:after{
-                border-color: $color4;
+                border-color: $color1;
               }
             }
           }
           &_selected{
             .mm-listitem__text{
               background: none;
-              color: $color4;
+              color: $fontColor;
             }
           }
           &.trail{
