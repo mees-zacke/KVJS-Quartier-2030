@@ -1,0 +1,5 @@
+
+<div class="layout_simple arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+  <?php if ($this->date): ?><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?=  \Date::parse("d. M. Y", $this->time) ?></time><?php endif; ?><br>
+  <?= $this->headline ?>
+</div>

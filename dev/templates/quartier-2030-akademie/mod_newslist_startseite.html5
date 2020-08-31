@@ -1,0 +1,13 @@
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+<a href="{{link_url::43}}" title="Nachrichten">
+  <?php if (empty($this->articles)): ?>
+  <p class="empty"><?= $this->empty ?></p>
+  <?php else: ?>
+  <?= implode('', $this->articles) ?>
+  <?= $this->pagination ?>
+  <?php endif; ?>
+</a>
+
+<?php $this->endblock(); ?>
