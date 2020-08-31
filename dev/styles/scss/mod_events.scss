@@ -13,12 +13,12 @@
       padding: 10px;
       text-align: center;
       .tag{
-        color: white;
+        color: $white;
         font-weight: 600;
         font-size: $teaserSize;
       }
       .jahr{
-        color: white;
+        color: $white;
         font-weight: 600;
         font-size: $fontSize;
       }
@@ -148,6 +148,7 @@
         &-select {
           select {
             @include transition();
+            color: $black;
             max-width: 100%;
             outline: none;
             padding: 0.25em 0.5em;

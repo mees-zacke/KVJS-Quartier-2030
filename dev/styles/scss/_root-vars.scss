@@ -27,10 +27,10 @@ body{
     --color6: #FFF;
     --color7: #000;
     --black: #000;
-    --black-50: transparent;
+    --black-50: rgba(0,0,0,0.5);
     --black-with-BG: #FFF;
     --white: #FFF;
-    --white-50: transparent;
+    --white-50: rgba(255,255,255,0.5);
     --white-low-contrast: #000;
     --grey: #EFEFEF;
     --border: #000;
@@ -39,6 +39,24 @@ body{
     }
   }
   &.black{
-
+    --font-color: #FFF;
+    --color1: #FFF;
+    --color2: #FFF;
+    --color3: #FFF;
+    --color4: #FFF;
+    --color5: #FFF;
+    --color6: #000;
+    --color7: #FFF;
+    --black: #FFF;
+    --black-50: rgba(255,255,255,0.5);
+    --black-with-BG: #000;
+    --white: #000;
+    --white-50: rgba(0,0,0,0.5);
+    --white-low-contrast: #FFF;
+    --grey: #4e4e4e;
+    --border: #FFF;
+    img, video{
+      filter: grayscale(1);
+    }
   }
 }
