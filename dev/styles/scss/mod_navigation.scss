@@ -91,7 +91,6 @@ $navColor: $black;
       grid-gap: $column-gap;
       align-items: stretch;
       justify-items: stretch;
-      font-size: 2rem;
     }
 
     li {
@@ -101,7 +100,7 @@ $navColor: $black;
         width: 100%;
         height: 100%;
         align-items: center;
-        font-size: $teaserSize;
+        font-size: 1.8rem;
         padding: 8% !important;
         text-shadow: 0 2px 3px $black-50;
         color: $white;
@@ -166,10 +165,10 @@ $navColor: $black;
           }
         }
       }
-      @media  all and (min-width: $break1){
+      @media  all and (min-width: $break2){
         grid-column: span 3;
       }
-      @media  all and (min-width: $break2){
+      @media all and (min-width: $break3) {
         grid-column: span 2;
       }
     }

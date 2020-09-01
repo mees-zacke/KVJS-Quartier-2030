@@ -37,7 +37,7 @@
 
         &-text, &-textarea, &-select, &-captcha {
           display: grid;
-          grid-template-columns: 25% 70%;
+          grid-template-columns: 33% 64%;
 
           label {
             text-align: left;
@@ -87,7 +87,7 @@
           > fieldset {
             > div {
               display: grid;
-              grid-template-columns: 25% 75%;
+              grid-template-columns: 33% 61%;
               grid-column-gap: 2rem;
 
               legend {
@@ -266,14 +266,6 @@
       }
     }
     @media all and (min-width: $break2) {
-      .head{
-        display: flex;
-        align-items: flex-end;
-        >p{
-          margin-left: 5rem;
-          font-weight: 600;
-        }
-      }
       .schritte-container{
         display: grid;
         grid-template-columns: repeat(3,1fr);
