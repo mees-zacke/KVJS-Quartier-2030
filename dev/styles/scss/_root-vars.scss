@@ -15,7 +15,7 @@ body{
   --white: #FFF;
   --white-50: rgba(255,255,255,0.5);
   --white-low-contrast: #FFF;
-  --grey: #EFEFEF;
+  --grey: #F5F5F5;
   --border: transparent;
   &.white{
     --font-color: #000;
@@ -32,7 +32,7 @@ body{
     --white: #FFF;
     --white-50: rgba(255,255,255,0.5);
     --white-low-contrast: #000;
-    --grey: #EFEFEF;
+    --grey: #F5F5F5;
     --border: #000;
     img, video{
       filter: grayscale(1);

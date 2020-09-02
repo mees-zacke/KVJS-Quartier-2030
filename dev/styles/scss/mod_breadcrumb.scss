@@ -20,13 +20,12 @@
 
       li {
         color: $fontColor;
-        &:first-of-type{
-          &:before{
+        &:last-of-type{
+          &:after{
             display: none;
           }
         }
-
-        &:before {
+        &:after {
           content: '|';
           margin: 0 0.5rem;
         }

@@ -47,9 +47,13 @@ body {
                         padding-top: 5px;
                         background-image: $lupe;
                         background-repeat: no-repeat;
+                        display: none;
                       }
 
                       &-text {
+                        label{
+                          display: none;
+                        }
                         input {
                           height: 2em;
                           width: 200px;
@@ -108,7 +112,7 @@ body {
               top: 5px;
               text-align: right;
               img{
-                height: 105%;
+                height: 111%;
                 max-width: auto;
               }
             }
@@ -165,7 +169,6 @@ body {
       background-color: $color6;
       .inside{
         @include pageWidth;
-        @include grid();
         .quicklinks{
           grid-column: span 4;
           display: none;
@@ -181,7 +184,6 @@ body {
           .ce_text{
             grid-column: span 1;
             &.ansprechpartner{
-              padding-top: 5em;
             }
           }
         }
@@ -192,6 +194,7 @@ body {
           }
         }
         @media all and (min-width: $break2){
+          @include grid();
           .info-kvjs{
             display: block;
             grid-column: 9/13;
@@ -256,7 +259,6 @@ body {
           .inside, >a{
             @include transition();
             z-index: 4;
-            background-color: $white;
             width: 80vw;
             position: absolute;
             top: 0;

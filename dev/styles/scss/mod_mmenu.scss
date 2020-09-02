@@ -1,8 +1,6 @@
 .mmenu {
   &-trigger {
-    width: 2.375rem;
-    height: 2.375rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     margin-right: 0;
     .name{
       display: none;
@@ -30,9 +28,17 @@
       }
 
     }
+    >div {
+      font-weight: 600;
+      font-size: $teaserSize;
+    }
     @media all and (min-width: $break1){
       margin-right: 2rem;
       margin-top: 5px;
+    }
+    @media all and (min-width: $break2){
+      display: flex;
+      align-items: baseline;
     }
     @media all and (min-width: 1300px){
       margin-bottom: 3px;
@@ -40,7 +46,7 @@
       margin-top: 0;
       .hamburger{
         width: 44px;
-        margin: 10px 10px 10px 0;
+        margin: 10px 1rem 10px 0;
       }
     }
   }
@@ -50,59 +56,86 @@
 .mod_mmenu{
   .mm-panels{
     .mm-panel{
-      background-color: $white;
+      background-color: $grey;
+      border: none;
       .mm-navbar{
-        background-color: $white;
+        background-color: $grey;
+        border: none;
         a{
-          color: $color5;
-          font-weight: 600;
+          color: $fontColor;
           &:before{
             @include transition();
-            border-color: $color5;
+            border-color: $fontColor;
           }
           &:hover, &:focus{
-            color: $color1;
+            color: $color5;
             &:before{
-              border-color: $color1;
+              border-color: $color5;
             }
           }
         }
       }
       .mm-listview{
         .mm-listitem{
-          background-color: $white;
+          background-color: $grey;
           &__text{
-            color: $color5;
-            font-weight: 600;
+            color: $fontColor;
             &:hover, &:focus{
-              color: $color1;
+              color: $color5;
             }
           }
           &__btn{
             &:after{
               @include transition();
-              border-color: $color5;
+              border-color: $fontColor;
             }
             &:hover, &:focus{
               &:after{
-                border-color: $color1;
+                border-color: $color5;
               }
             }
           }
           &_selected{
             .mm-listitem__text{
               background: none;
-              color: $fontColor;
+              color: $color5;
+              font-weight: 600;
             }
           }
           &.trail{
             .mm-listitem__text{
-              color: $color4;
+              color: $color5;
             }
             .mm-listitem__btn{
               &:after{
                 border-color: $color4;
               }
+            }
+          }
+          &:after{
+            border-color: $white;
+            right: 20px;
+          }
+        }
+      }
+      &#mm-0{
+        background-color: $white;
+        .mm-navbar{
+          background-color: $white;
+        }
+        .mm-listview{
+          .mm-listitem{
+            background-color: $white;
+            &_selected{
+              .mm-listitem__text{
+                background-color: $grey;
+              }
+            }
+            &.trail{
+              background-color: $grey;
+            }
+            &:after{
+              border-color: $grey;
             }
           }
         }
