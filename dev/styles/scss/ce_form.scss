@@ -1,6 +1,6 @@
 /// allgemeines Formular ///
 
-form {
+form:not(.suchfeld) {
   .formbody {
     > fieldset {
       margin-bottom: 0.25rem;

@@ -3,6 +3,11 @@
   <?php if ($this->hasText || $this->hasTeaser): ?>
     <a href="<?= $this->link; ?>">
   <?php endif; ?>
+	
+	<?php if ($this->hasMetaFields): ?>
+		<p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
+	<?php endif; ?>
+
     <h3 itemprop="name"><?= $this->headline ?></h3>
 
     <div class="ce_text block" itemprop="description">
@@ -20,15 +25,6 @@
       </p>
 
     </div>
-
-    <?php if ($this->hasMetaFields): ?>
-      <div class="datenblock">
-        <?php if ($this->hasMetaFields): ?>
-          <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
-        <?php endif; ?>
-
-      </div>
-    <?php endif; ?>
   <?php if ($this->hasText || $this->hasTeaser): ?>
     </a>
   <?php endif; ?>

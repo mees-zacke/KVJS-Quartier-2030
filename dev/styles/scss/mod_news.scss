@@ -16,10 +16,14 @@
 
   .layout_latest {
     a {
-      padding-top: 1em;
-      padding-bottom: 0.5em;
       border-bottom: 1px solid $color1;
       display: block;
+      padding: 1rem 1rem 0.5rem;
+
+      .info{
+        color: $black-50;
+        font-size: 0.8rem;
+      }
 
       > h3 {
         text-decoration: none;
@@ -27,7 +31,6 @@
         font-family: $font1;
         font-weight: 600;
         margin-bottom: 0.5em;
-        padding: 0 1rem;
       }
 
       >div {
@@ -35,7 +38,6 @@
         @include grid();
 
         p {
-          padding: 0 1rem;
           grid-column: span 12;
           color: $fontColor;
           margin-bottom: 0;
@@ -107,7 +109,6 @@
       .info{
 
       }
-      border-bottom: 1px solid $black;
       margin-bottom: 1rem;
     }
   }
