@@ -259,6 +259,7 @@ body {
           .inside, >a{
             @include transition();
             z-index: 4;
+            background-color: $white;
             width: 80vw;
             position: absolute;
             top: 0;
@@ -308,6 +309,9 @@ body {
               border: none;
               padding: 0;
               box-shadow: none;
+            }
+            .inside, >a{
+              background: none;
             }
             margin-right: 0;
             grid-column: span 3;

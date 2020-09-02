@@ -1,0 +1,21 @@
+.ce_comments{
+  .comment_default{
+    padding: 1rem 0;
+    border-bottom: 1px solid $black-50;
+    @include grid();
+    &:first-of-type{
+      border-top: 1px solid $black-50;
+    }
+    .info{
+      font-size: $linkSize;
+      color: $black-50;
+    }
+    .comment{
+      padding-left: 1fr;
+      grid-column: 2/13;
+    }
+  }
+  form{
+    margin-top: 2rem;
+  }
+}
