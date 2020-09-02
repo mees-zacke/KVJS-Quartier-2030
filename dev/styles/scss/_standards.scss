@@ -150,6 +150,12 @@ mark {
   }
 }
 
+.widget-text{
+  input{
+    color: $fontColor;
+  }
+}
+
 // Copyright in den Kopfbilder
 #mainPicture {
   .imageCopy {

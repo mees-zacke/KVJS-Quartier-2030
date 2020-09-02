@@ -2,17 +2,17 @@
 
 <?php $this->block('content'); ?>
  <div class="searchWrapper">
-  <form<?php if ($this->action): ?> action="<?= $this->action ?>"<?php endif; ?> method="get">
+  <form<?php if ($this->action): ?> action="<?= $this->action ?>"<?php endif; ?> method="get" class="suchfeld">
     <div class="formbody">
       <?php if ($this->id): ?>
         <input type="hidden" name="id" value="<?= $this->id ?>">
       <?php endif; ?>
-      <div class="widget widget-text">
+        <div class="widget widget-submit">
+            <button type="submit" id="ctrl_submit_<?= $this->uniqueId ?>" class="submit"><svg xmlns="http://www.w3.org/2000/svg" data-name="Ebene 1" viewBox="0 0 421.2 421.2"><defs></defs><title>  lupe</title><path class="cls-1" d="M421.2 378.8 321.1 278.6a176.7 176.7 0 1 0-42.4 42.4L378.8 421.2ZM176.7 284.4A107.7 107.7 0 1 1 284.4 176.7 107.7 107.7 0 0 1 176.7 284.4Z"/></svg></button>
+        </div>
+        <div class="widget widget-text">
         <label for="ctrl_keywords_<?= $this->uniqueId ?>" class="invisible"><?= $this->keywordLabel ?></label>
-        <input type="search" name="keywords" id="ctrl_keywords_<?= $this->uniqueId ?>" class="text" value="<?= $this->keyword ?>">
-      </div>
-      <div class="widget widget-submit">
-        <input type="image" src="files/layout/images/lupe.svg" id="ctrl_submit_<?= $this->uniqueId ?>" class="submit">
+        <input type="text" name="keywords" id="ctrl_keywords_<?= $this->uniqueId ?>" class="text" value="<?= $this->keyword ?>">
       </div>
       <?php if ($this->advanced): ?>
         <div class="widget widget-radio">
