@@ -81,9 +81,12 @@ body {
               height: 100%;
               top: 5px;
               text-align: right;
-              img{
+              div{
                 height: 111%;
                 max-width: auto;
+                background-repeat: no-repeat;
+                background-position: right;
+                background-size: contain;
               }
             }
           }

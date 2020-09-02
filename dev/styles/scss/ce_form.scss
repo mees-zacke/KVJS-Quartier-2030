@@ -196,6 +196,7 @@ form:not(.suchfeld) {
     .widget-submit {
       button {
         @include button;
+        width: 33%;
       }
     }
   }

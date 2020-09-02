@@ -112,25 +112,21 @@
       margin-bottom: 1rem;
     }
   }
-  .back {
-    margin-top: 1rem;
-    a {
-      display: block;
-      width: 100%;
-      padding: 0.5em;
-      background-color: $color1;
-      color: white;
-      font-weight: 600;
-      border: 1px solid $white;
-
-      &:hover, &:focus {
-        background-color: $white;
-        border-color: $color1;
-        color: $color1;
+    .back{
+      margin-top: 1rem;
+      a{
+        display: inline;
+        padding: 0.5em;
+        background-color: $grey;
+        color: $black;
+        border: 1px solid $white;
+        &:hover, &:focus{
+          background-color: $white;
+          color: $black-50;
+          border-color: $black-50;
+        }
       }
-
     }
-  }
 
 
 }

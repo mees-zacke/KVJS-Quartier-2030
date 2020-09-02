@@ -17,6 +17,15 @@ body{
   --white-low-contrast: #FFF;
   --grey: #F5F5F5;
   --border: transparent;
+
+  #logo-quartier{
+    figure{
+      div{
+        background-image: url("/files/layout/images/Quartier_2030_Logo_farbig.svg");
+      }
+    }
+  }
+
   &.white{
     --font-color: #000;
     --color1: #000;
@@ -34,7 +43,16 @@ body{
     --white-low-contrast: #000;
     --grey: #F5F5F5;
     --border: #000;
-    img, video{
+
+    #logo-quartier{
+      figure{
+        div{
+          background-image: url("/files/layout/images/Quartier_2030_Logo_SW.svg");
+        }
+      }
+    }
+
+    img, video, label{
       filter: grayscale(1);
     }
   }
@@ -55,7 +73,17 @@ body{
     --white-low-contrast: #FFF;
     --grey: #4e4e4e;
     --border: #FFF;
-    img, video{
+
+    #logo-quartier{
+      figure{
+        div{
+          background-image: url("/files/layout/images/Quartier_2030_Logo_SW.svg");
+          filter: invert(1);
+        }
+      }
+    }
+
+    img, video, label{
       filter: grayscale(1);
     }
   }
