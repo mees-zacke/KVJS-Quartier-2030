@@ -27,7 +27,6 @@
         font-size: $fontSize;
       }
       .ort{
-        font-weight: 600;
         font-size: $linkSize;
         color: $black-bg;
       }
@@ -36,6 +35,7 @@
       @include transition();
       padding: 10px 1rem;
       font-weight: 600;
+      font-size: $h3Size;
       color: $black;
       width: 100%;
     }
@@ -116,7 +116,7 @@
       background-color: $color7;
       color: $black-bg;
       grid-column: span 3;
-      display: inline-block;
+      display: block;
       margin-bottom: 1rem;
       border: 1px solid $white;
       padding: 1rem;
@@ -131,7 +131,7 @@
     }
   }
   .ansprechpartner{
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     p:first-of-type{
       font-size: $linkSize;
     }

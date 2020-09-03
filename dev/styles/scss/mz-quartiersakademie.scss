@@ -101,6 +101,18 @@ body {
     ////////////////////////////
 
     .custom {
+      #kopfbild{
+        position: relative;
+        figure{
+          margin-bottom: 0;
+        }
+        .figuren-kopf{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+        }
+      }
       #meta{
         @include pageWidth;
         margin-top: 4rem;
@@ -113,7 +125,7 @@ body {
     ////////////////////////////
     #container {
       @include pageWidth;
-      padding-top: 2rem;
+      padding-top: 4rem;
       // Anfang #main
 
       #main {
@@ -140,6 +152,12 @@ body {
     #footer {
       border-top: 1px solid $border;
       background-color: $color6;
+      padding-bottom: 100px;
+      background-image: url("/files/layout/images/footer-figuren.svg");
+      background-position: left 80%;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      font-size: $linkSize;
       .inside{
         @include pageWidth;
         .quicklinks{
@@ -157,6 +175,9 @@ body {
           .ce_text{
             grid-column: span 1;
             &.ansprechpartner{
+              strong{
+                font-size: $fontSize;
+              }
             }
           }
         }
@@ -209,7 +230,7 @@ body {
         #main{
           .inside{
             .mod_article{
-              @include grid(9);
+              @include grid(8);
             }
           }
 
@@ -271,10 +292,12 @@ body {
         @media all and (min-width: $break2){
           @include grid();
           #main{
-            grid-column: span 9;
+            grid-column: span 8;
           }
           #right{
             position: static;
+            margin-right: 0;
+            grid-column: 10 / span 3;
             .sidebar-opener{
               display: none;
             }
@@ -290,8 +313,6 @@ body {
               max-height: none;
               background: none;
             }
-            margin-right: 0;
-            grid-column: span 3;
           }
         }
       }

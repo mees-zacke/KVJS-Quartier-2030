@@ -87,12 +87,15 @@
     border: 1px solid $border;
     padding: 1rem;
     background-color: $grey;
+    strong{
+      color: $fontColor;
+    }
     .layout_simple{
       margin-bottom: 1em;
-      font-size: $linkSize;
+      font-size: $fontSize;
       time{
         color: $black-50;
-        font-size: 0.8rem;
+        font-size: $linkSize;
       }
     }
   }

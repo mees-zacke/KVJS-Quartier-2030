@@ -47,12 +47,12 @@ body{
     #logo-quartier{
       figure{
         div{
-          background-image: url("/files/layout/images/Quartier_2030_Logo_SW.svg");
+          background-image: url("/files/layout/images/Quartier_2030_logo_grau.svg");
         }
       }
     }
 
-    img, video, label{
+    img, video, label, footer{
       filter: grayscale(1);
     }
   }
@@ -83,7 +83,7 @@ body{
       }
     }
 
-    img, video, label{
+    img, video, label, footer{
       filter: grayscale(1);
     }
   }

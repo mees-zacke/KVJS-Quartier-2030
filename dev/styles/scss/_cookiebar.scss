@@ -1,12 +1,4 @@
-.cookiebar {
-  font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1600 - 300)));
-
-  &__text, &__message {
-    margin-right: 0;
-  }
-
-  &__message {
-    display: block;
-    margin-bottom: 1em;
-  }
+.ce_optin_fallback {
+  padding: 1rem;
+  border: 1px solid $fontColor;
 }

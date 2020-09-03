@@ -1,18 +1,53 @@
+/* gudea-regular - latin */
 @font-face {
   font-family: 'Gudea';
   font-style: normal;
   font-weight: 400;
-  src: url('/files/layout/fonts/Gudea-Regular.ttf');
+  src: url('/files/layout/fontsgudea-v10-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Gudea'),
+  url('/files/layout/fonts/gudea-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/files/layout/fonts/gudea-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/files/layout/fonts/gudea-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('/files/layout/fonts/gudea-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('/files/layout/fonts/gudea-v10-latin-regular.svg#Gudea') format('svg'); /* Legacy iOS */
 }
+/* gudea-700 - latin */
 @font-face {
   font-family: 'Gudea';
-  font-style: italic;
+  font-style: normal;
+  font-weight: 700;
+  src: url('/files/layout/fontsgudea-v10-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Gudea Bold'), local('Gudea-Bold'),
+  url('/files/layout/fonts/gudea-v10-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/files/layout/fonts/gudea-v10-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/files/layout/fonts/gudea-v10-latin-700.woff') format('woff'), /* Modern Browsers */
+  url('/files/layout/fonts/gudea-v10-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('/files/layout/fonts/gudea-v10-latin-700.svg#Gudea') format('svg'); /* Legacy iOS */
+}
+
+/* eb-garamond-regular - latin */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
   font-weight: 400;
-  src: url('/files/layout/fonts/Gudea-Italic.ttf');
+  src: url('/files/layout/fonts/eb-garamond-v14-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('/files/layout/fonts/eb-garamond-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/files/layout/fonts/eb-garamond-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/files/layout/fonts/eb-garamond-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('/files/layout/fonts/eb-garamond-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('/files/layout/fonts/eb-garamond-v14-latin-regular.svg#EBGaramond') format('svg'); /* Legacy iOS */
 }
+/* eb-garamond-600 - latin */
 @font-face {
-  font-family: 'Gudea';
+  font-family: 'EB Garamond';
   font-style: normal;
   font-weight: 600;
-  src: url('/files/layout/fonts/Gudea-Bold.ttf');
+  src: url('/files/layout/fonts/eb-garamond-v14-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('/files/layout/fonts/eb-garamond-v14-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/files/layout/fonts/eb-garamond-v14-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/files/layout/fonts/eb-garamond-v14-latin-600.woff') format('woff'), /* Modern Browsers */
+  url('/files/layout/fonts/eb-garamond-v14-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('/files/layout/fonts/eb-garamond-v14-latin-600.svg#EBGaramond') format('svg'); /* Legacy iOS */
 }

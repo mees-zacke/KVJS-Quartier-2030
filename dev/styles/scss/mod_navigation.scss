@@ -105,7 +105,7 @@ $navColor: $black;
         text-shadow: 0 2px 3px $black-50;
         color: $white;
         border: 1px solid $border;
-
+        font-weight: 600;
         span {
           width: 100%;
           text-align: center;
@@ -178,12 +178,13 @@ $navColor: $black;
   .lernfelder{
     .level_1{
       grid-template-columns: 1fr;
-      grid-row-gap: 0.5rem;
+      grid-row-gap: 2rem;
       li{
         grid-column: span 1;
         a{
-          color: $white-contrast;
+          color: $black;
           background-color: $grey;
+          text-shadow: none;
         }
         &:last-of-type{
           display: none;
@@ -192,6 +193,7 @@ $navColor: $black;
       li.active{
         background-color: $color1;
         text-align: center;
+        text-shadow: 0 2px 3px $black-50;
         strong{
           width: 100%;
         }

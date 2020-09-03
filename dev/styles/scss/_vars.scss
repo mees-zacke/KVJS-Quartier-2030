@@ -24,7 +24,7 @@ $backgroundColor1: $white;
 
 // Schrift
 $font1: 'Gudea', Helvetica, sans-serif;
-$font2: 'EBGaramond', Times, serif;
+$font2: 'EB Garamond', Times, serif;
 
 // Schrift Farben
 $fontColor: var(--font-color);
@@ -47,19 +47,19 @@ $lupe: url('data:image/svg+xml;utf8,<svg id="Ebene_1" data-name="Ebene 1" xmlns=
 $max-fontSize: 18; // Font Size bei größter Größe
 $min-fontSize: 16; // Font Size bei mobiler Größe
 
-$max-teaserSize: 23; // Teaser Size bei größter Größe
+$max-teaserSize: 20; // Teaser Size bei größter Größe
 $min-teaserSize: 18; // Teaser Size bei mobiler Größe
 
-$max-linkSize: 16; // Link Size bei größter Größe
-$min-linkSize: 12; // Link Size bei mobiler Größe
+$max-linkSize: 12; // Link Size bei größter Größe
+$min-linkSize: 8; // Link Size bei mobiler Größe
 
 $fontWidth: 400;
-$lineHeight: 1.5;
+$lineHeight: 150%;
 
 // Überschrift Größen
 
 // h1
-$max-h1Size: 46; // h1 Size bei größter Größe
+$max-h1Size: 50; // h1 Size bei größter Größe
 $min-h1Size: 34; // h1 Size bei mobiler Größe
 
 // h2

@@ -58,6 +58,8 @@
     .mm-panel{
       background-color: $grey;
       border: none;
+      padding-left: 2rem;
+      padding-top: 2rem;
       .mm-navbar{
         background-color: $grey;
         border: none;
@@ -80,6 +82,7 @@
           background-color: $grey;
           &__text{
             color: $fontColor;
+            padding-left: 0;
             &:hover, &:focus{
               color: $color5;
             }
@@ -114,18 +117,23 @@
           }
           &:after{
             border-color: $white;
-            right: 20px;
+            border-width: 3px;
+            left: 0;
           }
         }
       }
       &#mm-0{
         background-color: $white;
+        padding-left: 4rem;
         .mm-navbar{
           background-color: $white;
         }
         .mm-listview{
           .mm-listitem{
             background-color: $white;
+            a{
+              font-weight: 600;
+            }
             &_selected{
               .mm-listitem__text{
                 background-color: $grey;
