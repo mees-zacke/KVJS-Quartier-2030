@@ -20,7 +20,7 @@ body{
 
   #logo-quartier{
     figure{
-      div{
+      a{
         background-image: url("/files/layout/images/Quartier_2030_Logo_farbig.svg");
       }
     }
@@ -46,7 +46,7 @@ body{
 
     #logo-quartier{
       figure{
-        div{
+        a{
           background-image: url("/files/layout/images/Quartier_2030_logo_grau.svg");
         }
       }
@@ -55,6 +55,14 @@ body{
     img, video, label, footer{
       filter: grayscale(1);
     }
+    #footer{
+      .info-kvjs, .beschreibung-container{
+        img{
+          filter: grayscale(1) contrast(1000%);
+        }
+      }
+    }
+
   }
   &.black{
     --font-color: #FFF;
@@ -76,15 +84,21 @@ body{
 
     #logo-quartier{
       figure{
-        div{
+        a{
           background-image: url("/files/layout/images/Quartier_2030_Logo_SW.svg");
-          filter: invert(1);
         }
       }
     }
 
     img, video, label, footer{
       filter: grayscale(1);
+    }
+    #footer{
+      .info-kvjs, .beschreibung-container{
+        img{
+          filter: grayscale(1) contrast(1000%) invert(1);
+        }
+      }
     }
   }
 }

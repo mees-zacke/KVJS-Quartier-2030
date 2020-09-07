@@ -21,12 +21,25 @@ jQuery(function ($) {
 
   $(document).ready(function(){
     if ($('#right')){
-      $('#right').prepend('<div class="sidebar-opener"></div>')
+      $('#right').prepend('<div class="sidebar-opener"><svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 416">\n' +
+          '  <title>sidebar</title>\n' +
+          '  <path d="M0,32V448H480V32ZM288,416H32V64H288Zm160,0H320V64H448Z" transform="translate(0 -32)"/>\n' +
+          '  <rect x="352" y="192" width="64" height="32"/>\n' +
+          '  <rect x="352" y="128" width="64" height="32"/>\n' +
+          '  <rect x="352" y="64" width="64" height="32"/>\n' +
+          '</svg>\n</div>')
     }
 
-    $('#right .sidebar-opener').on( 'click' , function close() {
+    $('#right .sidebar-opener').on( 'click' , function open() {
         $('#right').toggleClass('open');
       })
+  });
+
+  $(document).click(function(e){
+    if (!$(e.target).is("#right")
+        && $(e.target).parents("#right").length === 0) {
+      $('#right').removeClass('open');
+    }
   });
 
   /* bewegen von inhalten der Eventansicht in die Rechte Spalte */

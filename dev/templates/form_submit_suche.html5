@@ -1,5 +1,5 @@
 <?php $this->extend('form_row'); ?>
 
 <?php $this->block('field'); ?>
-    <button type="submit" id="ctrl_<?= $this->id ?>" class="submit<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>"<?= $this->getAttributes() ?>><svg xmlns="http://www.w3.org/2000/svg" data-name="Ebene 1" viewBox="0 0 421.2 421.2"><defs></defs><title>Suche starten</title><path class="cls-1" d="M421.2 378.8 321.1 278.6a176.7 176.7 0 1 0-42.4 42.4L378.8 421.2ZM176.7 284.4A107.7 107.7 0 1 1 284.4 176.7 107.7 107.7 0 0 1 176.7 284.4Z"/></svg></button>
+    <button type="submit" id="ctrl_<?= $this->id ?>" class="submit<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>"<?= $this->getAttributes() ?>><svg xmlns="http://www.w3.org/2000/svg" data-name="Ebene 1" viewBox="0 0 421.2 421.2"><title>Suche starten</title><path class="cls-1" d="M421.2 378.8 321.1 278.6a176.7 176.7 0 1 0-42.4 42.4L378.8 421.2ZM176.7 284.4A107.7 107.7 0 1 1 284.4 176.7 107.7 107.7 0 0 1 176.7 284.4Z"/></svg></button>
 <?php $this->endblock(); ?>

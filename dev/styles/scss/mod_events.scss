@@ -38,6 +38,11 @@
       font-size: $h3Size;
       color: $black;
       width: 100%;
+      .weiterlesen{
+        font-weight: 400;
+        font-size: $fontSize;
+        color: $color5;
+      }
     }
   }
     &:hover{
@@ -46,6 +51,9 @@
       }
       .titel{
         background-color: $grey;
+        .weiterlesen{
+          color: $color1;
+        }
       }
     }
   }

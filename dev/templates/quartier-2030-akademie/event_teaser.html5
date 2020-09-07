@@ -23,6 +23,7 @@
     <p>
       <?= $this->title ?>
     </p>
+    <span class="weiterlesen">Zur Veranstaltung »</span>
   </div>
     </a>
 

@@ -45,7 +45,7 @@ $navColor: $black;
           font-size: $linkSize;
         }
 
-        &:first-of-type, &:last-of-type {
+        &:first-of-type{
           &:before {
             display: none;
           }

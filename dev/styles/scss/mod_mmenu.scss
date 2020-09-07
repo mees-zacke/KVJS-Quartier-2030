@@ -26,22 +26,18 @@
           background-color: $color2;
         }
       }
-
-    }
-    >div {
-      font-weight: 600;
-      font-size: $teaserSize;
+      >div {
+        font-weight: 600;
+        font-size: $teaserSize;
+        color: $fontColor;
+      }
     }
     @media all and (min-width: $break1){
       margin-right: 2rem;
       margin-top: 5px;
     }
     @media all and (min-width: $break2){
-      display: flex;
-      align-items: baseline;
-    }
-    @media all and (min-width: 1300px){
-      margin-bottom: 3px;
+      margin-bottom: 0;
       margin-right: 3rem;
       margin-top: 0;
       .hamburger{
@@ -124,7 +120,9 @@
       }
       &#mm-0{
         background-color: $white;
-        padding-left: 4rem;
+        @media all and (min-width: $break3){
+          padding-left: 4rem;
+        }
         .mm-navbar{
           background-color: $white;
         }

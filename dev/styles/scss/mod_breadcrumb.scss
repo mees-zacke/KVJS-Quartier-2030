@@ -3,7 +3,7 @@
   @media all and (min-width: $break2){
     display: block;
     font-size: 0.875rem;
-    margin: 0 0 20px;
+    margin: 1vw 0;
 
     ul {
       display: flex;
@@ -12,7 +12,6 @@
       align-content: flex-start;
       align-items: flex-start;
       justify-content: flex-start;
-      margin: 1vw 0;
 
       > span {
         margin-right: 0.5rem;

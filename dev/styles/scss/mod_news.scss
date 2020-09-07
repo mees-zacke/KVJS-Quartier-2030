@@ -35,7 +35,6 @@
 
       >div {
         margin-bottom: 1em;
-        @include grid();
 
         p {
           grid-column: span 12;
