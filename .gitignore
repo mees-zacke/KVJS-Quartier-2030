@@ -1,5 +1,7 @@
+.idea/
 /dev/styles/css/
 /dev/testordner/
 /package-lock.json
 /node_modules/
 /dist/
+/node_modules/

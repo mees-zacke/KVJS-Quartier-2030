@@ -32,21 +32,13 @@
                 </time>
             </div>
             <div class="ort-container" itemprop="location" itemscope itemtype="http://schema.org/Place">
-                <p>
-                    Ort der Veranstaltung
-                </p>
-                <p class="ort" itemprop="name">
-                    <?= $this->address ?>
-                </p>
+                <p>Ort der Veranstaltung</p>
+                <p class="ort" itemprop="name"><?= $this->address ?></p>
             </div>
         </div>
         <div class="ansprechpartner move-to-right">
-            <p>
-                Die Fortbildung wird angeboten von:
-            </p>
-            <p>
-                <?= $this->teaser ?>
-            </p>
+            <p>Die Fortbildung wird angeboten von:</p>
+            <?= $this->teaser ?>
         </div>
     </div>
 

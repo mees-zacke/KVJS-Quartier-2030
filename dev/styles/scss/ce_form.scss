@@ -18,7 +18,8 @@
           padding: 1rem;
           color: $fontColor;
         }
-        label{
+
+        label {
           line-height: $lineHeight;
         }
 
@@ -85,52 +86,49 @@
         ////////// RADIO & CHECKBOX ////////////////////
         &-checkbox, &-radio {
           > fieldset {
-            > div {
-              display: grid;
-              grid-template-columns: 40% 55%;
-              grid-column-gap: 5%;
 
-              legend {
-                text-align: left;
-                grid-column: 1/3;
+            legend {
+              margin-bottom: 1rem;
+              border-bottom: 1px solid var(--color4);
+              @media screen and (min-width: $break2) {
+                float: left;
+                width: 40%;
+                text-align: right;
+                margin-right: 5%;
+                margin-bottom: 0;
+                border-bottom: none;
+
+              }
+            }
+
+            > span {
+
+              input {
+                display: none;
               }
 
-              > div {
-                grid-column: 1/3;
+              label {
+                display: grid;
+                grid-template-columns: 1.25rem 1fr;
+                grid-gap: 0.5em;
 
-                span {
-                  width: 49.3%;
-                  margin-right: 1.383%;
-                  margin-bottom: 1rem;
+                &:before {
+                  @include transition();
+                  content: "";
+                  background-color: $white;
+                  border: 1px solid $color4;
+                  height: 1.1rem;
+                }
 
-                  input {
-                    display: none;
-                  }
-
-                  label {
-                    display: grid;
-                    grid-template-columns: 1.25rem 1fr;
-                    grid-gap: 0.5em;
-
-                    &:before {
-                      @include transition();
-                      content: "";
-                      background-color: $white;
-                      border: 1px solid $color4;
-                      height: 1.1rem;
-                    }
-
-                    &:hover {
-                      &:before {
-                        border-color: $black-50;
-                      }
-                    }
-                  }
-
-                  &:nth-of-type(2n) {
-                    margin-right: 0;
+                &:hover {
+                  &:before {
+                    border-color: $black-50;
                   }
                 }
+              }
+              @media screen and (min-width: $break2) {
+                float: left;
+                margin-right: 2rem;
               }
             }
           }
@@ -151,15 +149,26 @@
 
           &.bereiche {
             fieldset {
-              > div {
-                legend {
-                  grid-column: 2/3;
-                  text-align: left;
-                  font-weight: 600;
-                  margin-bottom: 1rem;
+              >span {
+                @media screen and (min-width: $break2) {
+                  float: left;
+                  margin-left: 45%;
+                  &:first-of-type {
+                    margin-left: 0;
+                  }
+                }
+                @media screen and (min-width: $break3) and (max-width: 1199px) {
+                  &:first-of-type {
+                    margin-left: 45%;
+                  }
+                }
+
+                @media screen and (min-width: 1200px) {
+                  &:first-of-type {
+                    margin-left: 0;
+                  }
                 }
               }
-
             }
           }
         }
@@ -249,6 +258,7 @@
     padding-bottom: 1em;
     border-bottom: 2px solid $color1;
   }
+
   @include formular;
 
 
