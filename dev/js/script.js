@@ -48,7 +48,22 @@ jQuery(function ($) {
     $('.move-to-right').appendTo($('#right .inside'));
   });
 
+// Autocomplete
 
+  $(function() {
+    $( "#header .linker-header #ctrl_2" ).autocomplete({
+      source: 'files/layout/php/live_search.php',
+      minLength: 2,
+      contentType: "application/json; charset=utf-8",
+      select: function(event, ui) {
+        if(ui.item){
+          $(event.target).val(ui.item.value);
+        }
+        $(event.target.form).submit();
+      }
+
+    });
+  });
 
 
 

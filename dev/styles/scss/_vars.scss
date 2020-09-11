@@ -47,8 +47,8 @@ $lupe: url('data:image/svg+xml;utf8,<svg id="Ebene_1" data-name="Ebene 1" xmlns=
 $max-fontSize: 18; // Font Size bei größter Größe
 $min-fontSize: 16; // Font Size bei mobiler Größe
 
-$max-teaserSize: 20; // Teaser Size bei größter Größe
-$min-teaserSize: 18; // Teaser Size bei mobiler Größe
+$max-teaserSize: 22; // Teaser Size bei größter Größe
+$min-teaserSize: 20; // Teaser Size bei mobiler Größe
 
 $max-linkSize: 14; // Link Size bei größter Größe
 $min-linkSize: 12; // Link Size bei mobiler Größe
@@ -67,8 +67,8 @@ $max-h2Size: 36; // h2 Size bei größter Größe
 $min-h2Size: 26; // h2 Size bei mobiler Größe
 
 // h3
-$max-h3Size: $max-teaserSize; // h3 bei größter Größe
-$min-h3Size: $max-teaserSize; // h3 bei mobiler Größe
+$max-h3Size: 24; // h3 bei größter Größe
+$min-h3Size: 22; // h3 bei mobiler Größe
 
 // h4
 $max-h4Size: $max-fontSize; // h4 bei größter Größe

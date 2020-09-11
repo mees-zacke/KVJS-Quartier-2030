@@ -259,6 +259,9 @@
 
     .schritte-container {
       .schritt-container {
+        *{
+          color: $black-50;
+        }
         .schritt {
           border-bottom: 1px solid $color4;
           background-color: $white;
@@ -268,11 +271,20 @@
 
           p {
             margin: 0;
-            padding: 1rem;
+            padding: 0;
+            @media all and (min-width: $break2){
+              padding: 1rem;
+            }
           }
 
           &.active {
             border-width: 2px;
+            p{
+              color: $fontColor;
+            }
+            +p{
+              color: $fontColor;
+            }
           }
         }
 

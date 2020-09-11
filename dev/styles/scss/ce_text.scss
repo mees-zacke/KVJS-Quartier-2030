@@ -22,6 +22,15 @@
     }
   }
 
+  .dropDownReadMore, .after{
+    @include transition();
+    color: $color5;
+    cursor: pointer;
+    &:hover, &:focus{
+      color: $color1;
+    }
+  }
+
   figure {
     margin-bottom: 1em;
     &.float_left, &.float-left {

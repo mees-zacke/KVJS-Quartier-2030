@@ -100,7 +100,7 @@ $navColor: $black;
         width: 100%;
         height: 100%;
         align-items: center;
-        font-size: 1.8rem;
+        font-size: $h3Size;
         padding: 8% !important;
         text-shadow: 0 2px 3px $black-50;
         color: $white;
@@ -165,7 +165,7 @@ $navColor: $black;
           }
         }
       }
-      @media  all and (min-width: $break2){
+      @media  all and (min-width: $break1){
         grid-column: span 3;
       }
       @media all and (min-width: $break3) {
@@ -178,10 +178,11 @@ $navColor: $black;
   .lernfelder{
     .level_1{
       grid-template-columns: 1fr;
-      grid-row-gap: 2rem;
+      grid-row-gap: 1rem;
       li{
         grid-column: span 1;
         a{
+          font-size: $teaserSize;
           color: $black;
           background-color: $grey;
           text-shadow: none;
@@ -191,6 +192,7 @@ $navColor: $black;
         }
       }
       li.active{
+        font-size: $teaserSize;
         background-color: $color1;
         text-align: center;
         text-shadow: 0 2px 3px $black-50;

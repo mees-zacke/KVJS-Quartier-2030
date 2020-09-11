@@ -10,7 +10,7 @@
       min-width: 33%;
       min-height: 6rem;
       background-color: $color7;
-      padding: 10px;
+      padding: 5px;
       text-align: center;
       @media all and (min-width: $break2){
         min-width: 8rem;
@@ -37,6 +37,7 @@
       font-weight: 600;
       font-size: $h3Size;
       color: $black;
+      line-height: 125%;
       width: 100%;
       .weiterlesen{
         font-weight: 400;
@@ -76,7 +77,7 @@
         padding: 1rem 0;
         .datum-zeit-container{
           display: flex;
-          font-size: $linkSize;
+          font-size: $fontSize;
           margin-bottom: 1rem;
           *{
             font-weight: 600;
@@ -139,6 +140,7 @@
     }
   }
   .ansprechpartner{
+    margin-top: 3rem;
     margin-bottom: 5rem;
     p:first-of-type{
       font-size: $linkSize;

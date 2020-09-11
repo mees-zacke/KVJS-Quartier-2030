@@ -20,7 +20,11 @@ body {
         position: relative;
 
         .linker-header {
-          padding-top: 5vh;
+          padding-top: 1vh;
+          margin-right: 3rem;
+          @media all and (min-width: $break2){
+            padding-top: 5vh;
+          }
 
           .navigation-suche-container {
             display: block;
@@ -49,7 +53,7 @@ body {
 
               .colorSwitch {
                 border: 1px solid;
-                width: 2.25rem;
+                width: 1.75rem;
                 padding: 5px;
                 display: block;
                 border-radius: 0.25rem;
@@ -94,19 +98,19 @@ body {
               a {
                 display: block;
                 margin-left: auto;
-                height: 111%;
+                height: 105%;
                 background-repeat: no-repeat;
                 background-position: right;
                 background-size: contain;
-                filter: drop-shadow(1px 2px 2px $black-50);
+                margin-top: 15px;
                 width: 100%;
-                @media all and (min-width: 438px){
+                @media all and (min-width: 527px){
                   width: 325px;
                 }
                 @media all and (min-width: $break2){
                   width: 100%;
                 }
-                @media all and (min-width: 988px){
+                @media all and (min-width: 1068px){
                   width: 540px;
                 }
               }
@@ -220,7 +224,7 @@ body {
     ////////////////////////////
 
     #footer {
-      border-top: 1px solid $border;
+      border-top: 1px solid $black-50;
       background-color: $color6;
       padding-bottom: 100px;
       background-image: url("/files/layout/images/footer-figuren.svg");

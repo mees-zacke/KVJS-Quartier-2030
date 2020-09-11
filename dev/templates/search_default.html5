@@ -1,6 +1,6 @@
 <div class="<?= $this->class ?>">
     <a href="<?= $this->href ?>" title="<?= $this->title ?>">
-        <h2><?= $this->link ?></h2>
+        <h3><?= $this->link ?></h3>
 
         <?php if ($this->context): ?>
             <p class="context"><?= $this->context ?></p>

@@ -9,11 +9,25 @@
             <div class="datum-zeit-container">
                 <time datetime="<?= $this->datetime ?>" itemprop="startDate">
                     <span class="datum">
-                        <?= \Date::parse("d M Y", $this->startDate) ?>
+                        <?= \Date::parse("d M Y", $this->startDate) ?><?php if($this->endDate): ?> - <?= \Date::parse("d M Y", $this->endDate) ?><?php endif; ?>
                     </span>
-                    <?php if ($this->time): ?>
-                    <span class="zeit"> | <?= $this->time ?> Uhr
-                    </span>
+                    <?php if ($this->addTime): ?>
+                        <span class="zeit"> |
+                            <?= \Date::parse("H:i", $this->startTime) ?>
+                            <?php if ( $this->endDate):?>
+                                <?php if( ($this->startTime - $this->startDate) !== ($this->endTime - $this->endDate) ): ?>
+                                    - <?= \Date::parse("H:i", $this->endTime) ?> Uhr
+                                <?php else: ?>
+                                    Uhr
+                                <?php endif; ?>
+                            <?php else: ?>
+                                <?php if($this->startTime !== $this->endTime ): ?>
+                                    - <?= \Date::parse("H:i", $this->endTime) ?> Uhr
+                                <?php else: ?>
+                                    Uhr
+                                <?php endif; ?>
+                            <?php endif; ?>
+                        </span>
                     <?php endif; ?>
                 </time>
             </div>

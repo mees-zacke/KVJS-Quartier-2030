@@ -114,6 +114,10 @@ mark {
   padding: 0 2px;
 }
 
+.kleiner-text{
+  font-size: $linkSize;
+}
+
 .teaser{
   font-size: $teaserSize;
 }
@@ -145,7 +149,8 @@ mark {
   top: 0.25rem;
   padding: 0.125em 0.25em;
   display: inline-block;
-  color: $white-50;
+  color: $white;
+  opacity: 0.8;
   text-shadow: 0 0 0.125em $black;
   writing-mode: vertical-lr;
   transform: rotate(180deg);

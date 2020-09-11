@@ -6,7 +6,7 @@
   .ui-menu-item {
     border-left: $border;
     border-right: $border;
-    background-color: #fff;
+    background-color: $white;
     text-indent: 2px;
     cursor: pointer;
     color: $black;
@@ -21,6 +21,8 @@
   }
 
   .ui-menu-item-wrapper {
+    padding-top: 5px;
+    padding-bottom: 5px;
     border: $border;
   }
 
@@ -30,6 +32,7 @@
 
   .ui-state-focus, .ui-state-hover, .ui-state-active {
     background-color: $color1;
+    color: $black-bg;
   }
 }
 
