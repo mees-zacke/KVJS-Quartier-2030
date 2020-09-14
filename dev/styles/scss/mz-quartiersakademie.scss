@@ -251,7 +251,7 @@ body {
           grid-template-columns: 1fr 1fr;
           grid-gap: 4vw;
 
-          .ce_text {
+          .ce_text, .ce_image {
             grid-column: span 1;
 
             &.ansprechpartner {
@@ -260,6 +260,11 @@ body {
               strong {
                 font-size: $fontSize;
               }
+            }
+          }
+          .ce_image{
+            @media all and (min-width: $break2){
+              width: 48%;
             }
           }
         }
