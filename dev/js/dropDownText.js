@@ -1,33 +1,25 @@
 jQuery(function($) {
 
-    $(document).ready(function(){
-        dropDownText();
+    $(document).ready(function () {
+        closeAll();
+    });
 
-    })
-    function dropDownText() {
-        var dropDownElement = $('p').children('.dropDownReadMore');
-        if (dropDownElement) {
-            $(dropDownElement).parent().append('&nbsp;');
-            $(dropDownElement).parent().nextAll('.after').css('display','none');
-            !$(dropDownElement).parent().nextAll().not('.after').css('display','none');
-            $(dropDownElement).on('click touch', function() {
-                $(this).parent().nextAll().not('.after').slideToggle( function() {
-                    $(this).parent().toggleClass('active');
-                });
-                $(this).fadeToggle();
-                $(this).parent().siblings('.after').slideToggle();
-            })
-        }
-
-        var closeElement = $('p.after');
-        if (closeElement) {
-            $(closeElement).on('click touch', function() {
-                $(this).slideToggle();
-                $(this).siblings().children('.dropDownReadMore').fadeToggle();
-                $(this).prevAll().children('.dropDownReadMore').parent().nextAll().not('.after').slideToggle();
-                $(this).parent().toggleClass('active');
-            })
+    var start = $('.akkordeon-start'),
+        end = $('.akkordeon-end');
+    function closeAll (){
+        if (start){
+            start.nextUntil(end).add(end).css('display','none');
+            $(start).append('<span class="inactive"></span>');
         }
     }
+    start.on('click', function (){
+        $(this).nextUntil(end).slideToggle();
+        $(this).nextAll('.akkordeon-end').first().fadeToggle();
+        $(this).children('span').toggleClass('active').toggleClass('inactive');
+    });
+    end.on('click', function (){
+        $(this).prevUntil(start).slideToggle();
+        $(this).fadeToggle();
+    });
 
-})
+});

@@ -22,7 +22,7 @@
     }
   }
 
-  .dropDownReadMore, .after{
+  .akkordeon-start, .akkordeon-end{
     @include transition();
     color: $color5;
     cursor: pointer;
