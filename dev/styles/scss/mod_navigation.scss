@@ -106,6 +106,14 @@ $navColor: $black;
         color: $white;
         border: 1px solid $border;
         font-weight: 600;
+        $background: $color2;
+        $color: $white;
+        background-color: $background;
+        &:hover{
+          color:$background;
+          background-color: $color;
+          border-color: $background;
+        }
         span {
           width: 100%;
           text-align: center;
@@ -116,46 +124,9 @@ $navColor: $black;
           text-shadow: 0 2px 3px $white-50;
         }
       }
-
-      &:nth-of-type(3n+1){
-        a{
-          $background: $color7;
-          $color: $white;
-          background-color: $background;
-          &:hover{
-            color:$background;
-            background-color: $color;
-            border-color: $background;
-          }
-        }
-      }
-      &:nth-of-type(3n+2){
-        a{
-          $background: $color2;
-          $color: $white;
-          background-color: $background;
-          &:hover{
-            color:$background;
-            background-color: $color;
-            border-color: $background;
-          }
-        }
-      }
-      &:nth-of-type(3n){
-        a{
-          $background: $color3;
-          $color: $white;
-          background-color: $background;
-          &:hover{
-            color:$background;
-            background-color: $color;
-            border-color: $background;
-          }
-        }
-      }
       &.last{
         a{
-          $background: $color4;
+          $background: $color3;
           $color: $white;
           background-color: $background;
           &:hover{
@@ -179,6 +150,17 @@ $navColor: $black;
     .level_1{
       grid-template-columns: 1fr;
       grid-row-gap: 1rem;
+      li.active{
+        font-size: $teaserSize;
+        background-color: $color1;
+        color: $white;
+        text-align: center;
+        text-shadow: 0 2px 3px $black-50;
+        strong{
+          width: 100%;
+        }
+      }
+    }
       li{
         grid-column: span 1;
         a{
@@ -191,15 +173,5 @@ $navColor: $black;
           display: none;
         }
       }
-      li.active{
-        font-size: $teaserSize;
-        background-color: $color1;
-        text-align: center;
-        text-shadow: 0 2px 3px $black-50;
-        strong{
-          width: 100%;
-        }
-      }
-    }
   }
 }
