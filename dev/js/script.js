@@ -65,8 +65,12 @@ jQuery(function ($) {
     });
   });
 
+// Readspeaker Button
 
-
+  $('.readspeaker-button').on('click keypress touch', function(){
+    console.log('hey');
+    $('.readspeaker-container').fadeToggle();
+  });
 
 
 ////////////////////////////////////////////////////////////

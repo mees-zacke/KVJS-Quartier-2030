@@ -1,0 +1,15 @@
+.readspeaker-container{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50vw;
+  z-index: 2000;
+  #readspeaker_button1{
+    display: flex;
+    .rs-player-loadindicator{
+      bottom: -3px;
+      top: unset;
+      left: -114px !important;
+    }
+  }
+}
