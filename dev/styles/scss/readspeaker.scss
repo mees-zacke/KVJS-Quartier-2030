@@ -1,9 +1,11 @@
 .readspeaker-container{
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
-  left: 50vw;
+  left: 0;
   z-index: 2000;
+  width: 100vw;
+  justify-content: center;
   #readspeaker_button1{
     display: flex;
     .rs-player-loadindicator{
