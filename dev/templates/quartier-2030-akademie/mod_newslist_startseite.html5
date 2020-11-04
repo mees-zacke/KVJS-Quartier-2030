@@ -1,7 +1,7 @@
 <?php $this->extend('block_unsearchable'); ?>
 
 <?php $this->block('content'); ?>
-  <strong>Aktuelles aus der Akademie</strong>
+  <strong>Aktuelles</strong>
   <?php if (empty($this->articles)): ?>
   <p class="empty"><?= $this->empty ?></p>
   <?php else: ?>

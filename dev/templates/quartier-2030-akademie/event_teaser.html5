@@ -6,7 +6,7 @@
   <div class="datenblock">
     <time datetime="<?= $this->datetime ?>" itemprop="startDate">
       <div class="tag">
-        <?= \Date::parse("d.M", $this->startDate) ?>
+        <?= \Date::parse("d. M", $this->startDate) ?>
       </div>
       <div class="jahr">
         <?= \Date::parse("Y", $this->startDate) ?>
