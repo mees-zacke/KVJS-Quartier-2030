@@ -1,6 +1,8 @@
 <div class="event layout_teaser<?= $this->classList ?>" itemscope itemtype="http://schema.org/Event">
 
-    <a href="<?= $this->href ?>" title="<?= $this->title ?> (<?php if ($this->day): ?><?= $this->day ?>, <?php endif; ?><?= $this->date ?><?php if ($this->time): ?> <?= $this->time ?><?php endif; ?>)"<?= $this->target ?> itemprop="url">
+  <a href="<?= $this->href ?>"
+     title="<?= $this->title ?> (<?php if ($this->day): ?><?= $this->day ?>, <?php endif; ?><?= $this->date ?><?php if ($this->time): ?> <?= $this->time ?><?php endif; ?>)"<?= $this->
+  target ?> itemprop="url">
 
 
   <div class="datenblock">
@@ -14,17 +16,24 @@
     </time>
     <?php if($this->location):?>
     <div class="ort" itemprop="location" itemscope itemtype="http://schema.org/Place">
-      <span itemprop="name" ><?= $this->location ?></span>
+      <span itemprop="name"><?= $this->location ?></span>
     </div>
     <?php endif;?>
   </div>
 
   <div class="titel">
     <p>
-      <?= $this->title ?>
+      <span class="title">
+        <?= $this->title ?>
+      </span>
+      <?php if($this->subtitle): ?>
+      <span class="subtitle">
+      <?= $this->subtitle ?>
+    </span>
+      <?php endif; ?>
     </p>
     <span class="weiterlesen">Zur Veranstaltung »</span>
   </div>
-    </a>
+  </a>
 
 </div>

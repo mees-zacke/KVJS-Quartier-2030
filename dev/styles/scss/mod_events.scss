@@ -32,10 +32,16 @@
       }
     }
     .titel{
+      .title{
+        font-weight: 600;
+        font-size: $h3Size;
+      }
+      .subtitle{
+        font-weight: 400;
+        font-size: $teaserSize;
+      }
       @include transition();
       padding: 10px 1rem;
-      font-weight: 600;
-      font-size: $h3Size;
       color: $black;
       line-height: 125%;
       width: 100%;
