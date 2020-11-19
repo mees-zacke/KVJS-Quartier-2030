@@ -2,6 +2,11 @@
 
     <div class="head">
         <h1 itemprop="name"><?= $this->title ?></h1>
+        <?php if($this->subtitle): ?>
+        <p class="subtitle teaser">
+      <?= $this->subtitle ?>
+    </p>
+        <?php endif; ?>
     </div>
 
     <div class="information-container">
