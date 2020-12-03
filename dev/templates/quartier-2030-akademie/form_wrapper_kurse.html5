@@ -3,20 +3,20 @@
 
 <div class="head">
     <h2>Jetzt online anmelden</h2>
-    <p>Unter dem Vorbehalt der Kostenübernahme durch das Land Baden-Württemberg</p>
+    {{insert_content::632}}
 </div>
 <div class="schritte-container">
     <div class="schritt-container">
         <div class="schritt active"><p>Schritt 1</p></div>
-        <p>Kurzer Text zu Schritt 1 mit Hinweisen zur Motivation </p>
+        {{insert_content::629}}
     </div>
     <div class="schritt-container">
         <div class="schritt"><p>Schritt 2</p></div>
-        <p>Wir prüfen, Sie bekommen Bescheid Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name </p>
+        {{insert_content::630}}
     </div>
     <div class="schritt-container">
         <div class="schritt"><p>Schritt 3</p></div>
-        <p>Der Anbieter melde sich bei Ihnen: Lorem Ipsum, hinaus zu gehen in die weite Grammatik. Der große </p>
+        {{insert_content::631}}
     </div>
 </div>
 <?php if ($this->headline): ?>

@@ -77,6 +77,13 @@ jQuery(function ($) {
     $('.readspeaker-container').fadeToggle();
   });
 
+// Kennung bei Formularen
+
+  $(window).ready(function(){
+    var kennung = $('.event.layout_full .kennung').attr('kennung');
+
+    $('#anmeldeformular .kennung').attr('value' , kennung);
+  });
 
 ////////////////////////////////////////////////////////////
 });
