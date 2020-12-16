@@ -20,8 +20,15 @@ body{
 
   #logo-quartier{
     figure{
-      a{
         background-image: url("/files/layout/images/Quartier_2030_Logo_farbig.svg");
+    }
+  }
+
+  #logo-kvjs{
+    figure{
+      background-image: url("/files/layout/images/KVJS-Logo-Text.svg");
+      @media all and (max-width: $break3){
+        background-image: url("/files/layout/images/KVJS-Logo-kompakt.svg");
       }
     }
   }
@@ -46,18 +53,16 @@ body{
 
     #logo-quartier{
       figure{
-        a{
           background-image: url("/files/layout/images/Quartier_2030_logo_grau.svg");
-        }
       }
     }
 
     img, video, label, footer{
       filter: grayscale(1);
     }
-    #footer{
-      .info-kvjs, .beschreibung-container{
-        img{
+    #footer, #header{
+      .info-kvjs, .beschreibung-container, #logo-kvjs{
+        figure{
           filter: grayscale(1) contrast(1000%);
         }
       }
@@ -84,18 +89,16 @@ body{
 
     #logo-quartier{
       figure{
-        a{
           background-image: url("/files/layout/images/Quartier_2030_Logo_SW.svg");
-        }
       }
     }
 
     img, video, label, footer{
       filter: grayscale(1);
     }
-    #footer{
-      .info-kvjs, .beschreibung-container{
-        img{
+    #footer, #header{
+      .info-kvjs, .beschreibung-container, #logo-kvjs{
+        figure{
           filter: grayscale(1) contrast(1000%) invert(1);
         }
       }

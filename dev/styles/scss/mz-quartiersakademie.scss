@@ -23,6 +23,7 @@ body {
           padding-top: 1vh;
           margin-right: 3rem;
           @media all and (min-width: $break2) {
+            width: 65%;
             padding-top: 5vh;
           }
 
@@ -100,34 +101,62 @@ body {
         .logo-container {
           position: relative;
           width: 100%;
-
-          .ce_image {
-            figure {
-              position: absolute;
-              z-index: 5;
-              width: 100%;
-              height: 100%;
-              top: 5px;
-              text-align: right;
-
-              a {
-                display: block;
-                margin-left: auto;
-                height: 105%;
-                background-repeat: no-repeat;
-                background-position: right;
-                background-size: contain;
-                margin-top: 15px;
+          a{
+            display: flex;
+            height: 100%;
+            justify-content: space-between;
+            .ce_image{
+              figure{
                 width: 100%;
-                @media all and (min-width: 527px) {
-                  width: 325px;
-                }
-                @media all and (min-width: $break2) {
-                  width: 100%;
-                }
-                @media all and (min-width: 1068px) {
-                  width: 540px;
-                }
+                height: 70%;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+              }
+            }
+            #logo-quartier{
+              width: 60%;
+              height: 119%;
+              position: relative;
+              z-index: 400;
+              figure{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 85%;
+                background-position: bottom left;
+              }
+            }
+            #logo-kvjs{
+              width: 40%;
+              height: 100%;
+              margin-left: 1rem;
+              figure{
+                background-position: top right;
+              }
+            }
+            @media all and (max-width: $break3){
+              #logo-quartier{
+                width: 100%;
+                height: 119%;
+              }
+              #logo-kvjs{
+                position: absolute;
+                right: 0;
+                top: 0;
+              }
+            }
+            @media all and (max-width: $break2){
+              #logo-quartier{
+                height: 125%;
+              }
+              #logo-kvjs{
+                width: 30%;
+              }
+            }
+            @media all and (max-width: $break1) {
+              #logo-kvjs{
+                width: 40%;
               }
             }
           }
@@ -343,7 +372,7 @@ body {
 
             .ce_text.ansprechpartner {
               padding-top: 1em;
-              padding-left: 11%;
+              padding-left: 9%;
             }
           }
 
