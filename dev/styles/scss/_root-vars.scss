@@ -27,7 +27,7 @@ body{
   #logo-kvjs{
     figure{
       background-image: url("/files/layout/images/KVJS-Logo-Text.svg");
-      @media all and (max-width: $break3){
+      @media all and (max-width: 1100px){
         background-image: url("/files/layout/images/KVJS-Logo-kompakt.svg");
       }
     }
