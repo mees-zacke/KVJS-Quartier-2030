@@ -9,7 +9,7 @@
       @include transition();
       min-width: 33%;
       min-height: 6rem;
-      background-color: $color7;
+      background-color: $color2;
       padding: 5px;
       text-align: center;
       @media all and (min-width: $break2){
@@ -28,7 +28,7 @@
       }
       .ort{
         font-size: $linkSize;
-        color: $black-bg;
+        color: $white;
       }
     }
     .titel{
@@ -46,6 +46,7 @@
       line-height: 125%;
       width: 100%;
       .weiterlesen{
+        @include transition();
         font-weight: 400;
         font-size: $fontSize;
         color: $color5;

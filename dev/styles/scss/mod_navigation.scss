@@ -102,7 +102,6 @@ $navColor: $black;
         align-items: center;
         font-size: $h3Size;
         padding: 8% !important;
-        text-shadow: 0 2px 3px $black-50;
         color: $white;
         border: 1px solid $border;
         font-weight: 600;
@@ -152,10 +151,9 @@ $navColor: $black;
       grid-row-gap: 1rem;
       li.active{
         font-size: $teaserSize;
-        background-color: $color1;
+        background-color: $color2;
         color: $white;
         text-align: center;
-        text-shadow: 0 2px 3px $black-50;
         strong{
           width: 100%;
         }
