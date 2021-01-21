@@ -4,6 +4,39 @@
     Florian Krohmer
 **/
 body {
+  #logo-quartier{
+    svg{
+      .cls-2{
+        fill:var(--color-green1)
+      }
+      .himmel{
+        fill:var(--color-blue1)
+      }
+      .cls-3{
+        fill:var(--color-blue2)
+      }
+      .cls-7{
+        fill:var(--color-green2)
+      }
+      .cls-10{
+        fill:$white
+      }
+      .gras-rand{
+        fill: var(--color-green4)
+      }
+      .baum-aeste{
+        fill:var(--color-green3)
+      }
+    }
+  }
+  #logo-kvjs{
+    svg{
+      fill: var(--color-kvjs);
+      .white{
+        fill: $white;
+      }
+    }
+  }
 
   #wrapper {
     overflow: hidden;
@@ -11,9 +44,21 @@ body {
     //////// HEADER ////////
     ////////////////////////////
     #header {
+      @include transition();
       background-color: $color6;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      top: 0;
+      &.hidden{
+        top: -141px;
+      }
+      &.visible{
+        top: 0;
+      }
 
       .inside {
+        @include transition();
         @include pageWidth;
         display: flex;
         justify-content: space-between;
@@ -22,7 +67,7 @@ body {
         .linker-header {
           padding-top: 1vh;
           margin-right: 3rem;
-          @media all and (min-width: $break2) {
+          @media all and (min-width: 769px) {
             width: 65%;
             padding-top: 5vh;
           }
@@ -38,8 +83,8 @@ body {
             }
 
             .mod_form {
-              display: none;
-              @media all and (min-width: $break2) {
+              display: none!important;
+              @media all and (min-width: 769px) {
                 display: block;
                 align-self: flex-end;
               }
@@ -91,7 +136,7 @@ body {
 
             }
 
-            @media all and (min-width: $break2) {
+            @media all and (min-width: 769px) {
               display: flex;
               align-items: flex-end;
             }
@@ -99,6 +144,7 @@ body {
         }
 
         .logo-container {
+          @include transition();
           position: relative;
           width: 100%;
           a{
@@ -107,32 +153,46 @@ body {
             justify-content: space-between;
             .ce_image{
               figure{
+                display: flex;
                 width: 100%;
                 height: 70%;
-                background-repeat: no-repeat;
-                background-size: contain;
-
+                svg{
+                  max-height: 100%;
+                }
               }
             }
             #logo-quartier{
+              @include transition();
               width: 60%;
               height: 119%;
               position: relative;
               z-index: 400;
               figure{
+                @include transition();
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 height: 85%;
-                background-position: bottom left;
+                align-items: flex-end;
+                svg{
+                  .symbol{
+                    filter: drop-shadow(1px 1px 1px $black-50);
+                  }
+                }
               }
             }
             #logo-kvjs{
+              @include transition();
               width: 40%;
               height: 100%;
               margin-left: 1rem;
               figure{
-                background-position: top right;
+                @include transition();
+                justify-content: flex-end;
+                svg{
+                  height: 100%;
+                  width: auto;
+                }
               }
             }
             @media all and (max-width: 1100px){
@@ -144,6 +204,11 @@ body {
                 position: absolute;
                 right: 0;
                 top: 0;
+                svg{
+                  .text{
+                    display: none !important;
+                  }
+                }
               }
             }
             @media all and (max-width: $break2){
@@ -313,7 +378,7 @@ body {
           }
 
           .ce_image {
-            @media all and (min-width: $break2) {
+            @media all and (min-width: 769px) {
               width: 48%;
             }
           }
@@ -353,7 +418,7 @@ body {
           }
         }
       }
-      @media all and (min-width: $break2) {
+      @media all and (min-width: 769px) {
         background-size: 80%;
         background-position: left 80%;
         .inside {
@@ -504,6 +569,31 @@ body {
               overflow-y: visible;
               max-height: none;
               background: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.onScroll{
+    #wrapper{
+      #header{
+        .logo-container{
+          a{
+            #logo-quartier{
+              figure{
+                justify-content: center;
+                @media all and (min-width: 769px) and (max-width: 1100px) {
+                  justify-content: flex-start;
+                }
+                height: 100%;
+              }
+            }
+            #logo-kvjs{
+              height: 100%;
+              @media all and (min-width: $break3) {
+                width: 20%;
+              }
             }
           }
         }

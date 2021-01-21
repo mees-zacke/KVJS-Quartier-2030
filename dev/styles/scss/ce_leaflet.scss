@@ -1,4 +1,7 @@
 .ce_leaflet{
+  .leaflet-pane,.leaflet-top,.leaflet-bottom{
+    z-index: 0;
+  }
   .leaflet-tile-pane{
     filter: brightness(0.5);
   }

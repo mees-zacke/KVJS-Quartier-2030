@@ -1,4 +1,10 @@
 //// Farben
+@mixin defineColorHSL($color, $hue, $saturation, $lightness){
+  #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");
+  #{$color}-h: #{$hue};
+  #{$color}-s: #{$saturation};
+  #{$color}-l: #{$lightness};
+}
 
 body{
   --font-color: #343434;
@@ -18,20 +24,16 @@ body{
   --grey: #F5F5F5;
   --border: transparent;
 
-  #logo-quartier{
-    figure{
-        background-image: url("/files/layout/images/Quartier_2030_Logo_farbig.svg");
-    }
-  }
+  /// Quartier Logo
+  @include defineColorHSL(--color-green1, 65, 66%, 51%);
+  @include defineColorHSL(--color-green2, 75, 56%, 51%);
+  @include defineColorHSL(--color-green3, 78, 68%, 45%);
+  @include defineColorHSL(--color-green4, 132, 54%, 43%);
+  @include defineColorHSL(--color-blue1, 203, 87%, 91%);
+  @include defineColorHSL(--color-blue2, 196, 85%, 60%);
 
-  #logo-kvjs{
-    figure{
-      background-image: url("/files/layout/images/KVJS-Logo-Text.svg");
-      @media all and (max-width: 1100px){
-        background-image: url("/files/layout/images/KVJS-Logo-kompakt.svg");
-      }
-    }
-  }
+  /// KVJS Logo
+  @include defineColorHSL(--color-kvjs, 203, 100%, 37%);
 
   &.white{
     --font-color: #000;
@@ -51,17 +53,22 @@ body{
     --grey: #F5F5F5;
     --border: #000;
 
-    #logo-quartier{
-      figure{
-          background-image: url("/files/layout/images/Quartier_2030_logo_grau.svg");
-      }
-    }
+    /// Quartier Logo
+    @include defineColorHSL(--color-green1, 0, 0%, 0%);
+    @include defineColorHSL(--color-green2, 0, 0%, 0%);
+    @include defineColorHSL(--color-green3, 0, 0%, 0%);
+    @include defineColorHSL(--color-green4, 0, 0%, 0%);
+    @include defineColorHSL(--color-blue1, 0, 0%, 100%);
+    @include defineColorHSL(--color-blue2, 0, 0%, 0%);
+
+    /// KVJS Logo
+    @include defineColorHSL(--color-kvjs, 0, 0%, 0%);
 
     img, video, label, footer{
       filter: grayscale(1);
     }
     #footer, #header{
-      .info-kvjs, .beschreibung-container, #logo-kvjs{
+      .info-kvjs, .beschreibung-container{
         figure{
           filter: grayscale(1) contrast(1000%);
         }
@@ -87,17 +94,22 @@ body{
     --grey: #4e4e4e;
     --border: #FFF;
 
-    #logo-quartier{
-      figure{
-          background-image: url("/files/layout/images/Quartier_2030_Logo_SW.svg");
-      }
-    }
+    /// Quartier Logo
+    @include defineColorHSL(--color-green1, 0, 0%, 100%);
+    @include defineColorHSL(--color-green2, 0, 0%, 100%);
+    @include defineColorHSL(--color-green3, 0, 0%, 100%);
+    @include defineColorHSL(--color-green4, 0, 0%, 100%);
+    @include defineColorHSL(--color-blue1, 0, 0%, 0%);
+    @include defineColorHSL(--color-blue2, 0, 0%, 100%);
+
+    /// KVJS Logo
+    @include defineColorHSL(--color-kvjs, 0, 0%, 100%);
 
     img, video, label, footer{
       filter: grayscale(1);
     }
     #footer, #header{
-      .info-kvjs, .beschreibung-container, #logo-kvjs{
+      .info-kvjs, .beschreibung-container{
         figure{
           filter: grayscale(1) contrast(1000%) invert(1);
         }
