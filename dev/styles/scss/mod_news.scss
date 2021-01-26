@@ -99,6 +99,9 @@
       }
     }
   }
+  &.news-archiv{
+    @include news-list()
+  }
 }
 
 .mod_newsreader, .mod_newslist {

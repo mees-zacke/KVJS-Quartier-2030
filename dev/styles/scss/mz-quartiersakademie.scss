@@ -83,10 +83,10 @@ body {
             }
 
             .mod_form {
-              display: none!important;
-              @media all and (min-width: 769px) {
-                display: block;
-                align-self: flex-end;
+              display: block;
+              align-self: flex-end;
+              @media all and (max-width: $break2) {
+                display: none!important;
               }
             }
 
