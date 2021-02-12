@@ -1,7 +1,6 @@
 <div class="event layout_full block<?= $this->class ?>" itemscope itemtype="http://schema.org/Event">
 
     <div class="head">
-        <div class="kennung" kennung="<?= $this->kennnummer ?>"></div>
         <h1 itemprop="name"><?= $this->title ?></h1>
         <?php if($this->subtitle): ?>
         <p class="subtitle teaser">
@@ -40,6 +39,10 @@
             <div class="ort-container" itemprop="location" itemscope itemtype="http://schema.org/Place">
                 <p>Ort der Veranstaltung</p>
                 <p class="ort" itemprop="name"><?= $this->address ?></p>
+            </div>
+            <div class="kennung-container ort-container">
+                <p>Kennzahl der Veranstaltung</p>
+                <p class="kennung ort" kennung="<?= $this->kennnummer ?>"><strong><?= $this->kennnummer ?></strong></p>
             </div>
         </div>
         <div class="ansprechpartner move-to-right">
